@@ -11,6 +11,11 @@ backgrounds likes the look of Shiplack.
 she wants to bring a flair of southern charm to the city. she is from the midwest.
 wants a kind of chalkboard looking ingredient list. think southern. maybe like those chalk labels for jars and stuff
 
+needs forms to enter in the ingredients and recipe instructions. so need backend database to hold. 
+
+wants a navbar at the top to change between the different aspects of page.
+
+
 
 
 
