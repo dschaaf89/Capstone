@@ -16,6 +16,8 @@ needs forms to enter in the ingredients and recipe instructions. so need backend
 wants a navbar at the top to change between the different aspects of page.
 
 
+doing reseach on how to make custom Navbar in react.
+
 
 
 
