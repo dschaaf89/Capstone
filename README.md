@@ -2,6 +2,14 @@ reasearch for Capstone.
 Sat Down with Sara Schaaf. Talked to her about what she wanted for her site. made a site diagram 
 (picture will go here )
 
+list of wants
+simple splash page of buisness. 
+tabs for recipes,crafts,travel,about me/contact us
+will eventually add a ecommerce to site so she can sell her crafts thru it.
+
+backgrounds likes the look of Shiplack. 
+she wants to bring a flair of southern charm to the city. she is from the midwest.
+wants a kind of chalkboard looking ingredient list. think southern. maybe like those chalk labels for jars and stuff
 
 
 
