@@ -32,7 +32,9 @@ looking into hosting of website.
 looking into how i want to do the recipe ingredients and instructions form intake since all recipe's having diferent amount of ingredients and steps to complete.
 
 
-Customer said she wants to be able to query lets say Breakfast and a list of breakfast recipe's will come up etc...
+Customer said she wants to be able to query lets say Breakfast and a list of breakfast recipe's will come up etc.
+
+trying to figure out how to store the different lists in firebase too
 
 
 
