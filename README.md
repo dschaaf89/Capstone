@@ -22,7 +22,7 @@ doing reseach on how to make custom Navbar in react.
 11:58
 Switched computers so i cloned repository and this is first commit.
 
-
+fab fa-readme
 
 
 

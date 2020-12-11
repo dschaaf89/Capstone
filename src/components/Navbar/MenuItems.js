@@ -1,4 +1,4 @@
-const MenuItem = [
+export const MenuItems = [
     {
         title:"Home",
         link:'#',
