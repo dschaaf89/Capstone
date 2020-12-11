@@ -1,3 +1,32 @@
+reasearch for Capstone.
+Sat Down with Sara Schaaf. Talked to her about what she wanted for her site. made a site diagram 
+(picture will go here )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
