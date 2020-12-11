@@ -16,13 +16,20 @@ needs forms to enter in the ingredients and recipe instructions. so need backend
 wants a navbar at the top to change between the different aspects of page.
 
 
-doing reseach on how to make custom Navbar in react.
+doing research on how to make custom Navbar in react.
 
 
 11:58
 Switched computers so i cloned repository and this is first commit.
 
 fab fa-readme
+https://www.youtube.com/watch?v=fL8cFqhTHwA
+
+
+looking into hosting of website. 
+
+
+
 
 
 

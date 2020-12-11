@@ -4,7 +4,8 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 2.5rem;
+  font-family: 'Lovers Quarrel', cursive;
 }
 .navbar-logo {
   justify-self: start;
@@ -14,7 +15,7 @@
 
 .fa-readme {
   margin-left:0.5rem ;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .nav-menu{
@@ -30,7 +31,10 @@
 
 .nav-links {
   text-decoration: none;
+  font-size: 3rem;
+  font-weight: bold;
   padding: 0.5rem 1rem;
+  color: black;
 }
 
 .nav-links:hover {
