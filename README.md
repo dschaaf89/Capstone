@@ -19,6 +19,10 @@ wants a navbar at the top to change between the different aspects of page.
 doing reseach on how to make custom Navbar in react.
 
 
+11:58
+Switched computers so i cloned repository and this is first commit.
+
+
 
 
 
