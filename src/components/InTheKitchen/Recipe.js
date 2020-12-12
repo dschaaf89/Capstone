@@ -20,7 +20,7 @@ function Recipe(props) {
   );
 }
 
-Recipe.PropTypes = {
+Recipe.PropType = {
   recipeName: PropTypes.string,
   ingredients: PropTypes.array,
   steps: PropTypes.array

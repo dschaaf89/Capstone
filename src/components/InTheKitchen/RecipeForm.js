@@ -17,8 +17,30 @@ function RecipeForm(props){
       steps:event.target.steps.value
     });
   }
-
   return (
+    <React.Fragment>
+      <form onSubmit = {addRecipeToFirestore}>
+        <input
+          type='text'
+          name='recipeName'
+          placeholder='recipeName' />
+        <input
+          type='text'
+          name='description'
+          placeholder='Description' />
+        <input
+          type='text'
+          name='ingredient'
+          placeholder='ingredient.' />
+          <textarea
+          type='text'
+          name='description'
+          placeholder='Description' />
+        <button type='submit'>Submit</button>
+      </form>
+    </React.Fragment>
+  )
+  
 
 }
 

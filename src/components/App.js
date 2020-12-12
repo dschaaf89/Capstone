@@ -1,4 +1,5 @@
 import Navbar from './Navbar/Navbar';
+import InTheKitchenController from './InTheKitchen/InTheKitchenController';
 import React from 'react'
 import './App.css';
 
@@ -7,6 +8,7 @@ return(
    
   <React.Fragment>
      <Navbar />
+     
   </React.Fragment>
 );
    

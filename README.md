@@ -1,3 +1,43 @@
+#### Daniel Schaaf	
+
+#### Sara’s Corner
+
+##### Description:
+This project was an idea my wife came up with as she aspires to be a crafting and Recipe Content Creator and came up with this idea as she was scrolling thru hundreds of recipe and crafting sites. Her and her friends hate having to comb thru stories just to get to the good stuff such as recipe’s and instructions on how to make certain things either crafting or in the kitchen. So she wants to start a new trend. The recipe and the steps frist then a story about the product or video.
+
+##### Use Case
+The main use for this website would be for those who want to learn how to make something craftwise or in the kitchen. What my wife says is that it will bring a midwestern charm to life in the City. the Simplistic of it all. Problems that i might face are creating a dynamic form so that she can add bigger recipe’s that need lots of ingredients or steps to make a crafting idea. Also being able to upload pics and video to a page. (Who are the main users? What problems are they facing that you will solve? What will it do for users? What is the purpose/goal of the project?)
+
+##### Minimum Viable Product
+(List the absolute minimum features the project requires before it is considered in a pre-alpha state)
+Minimum viable product would be the splash page and ability to add crafting procedure and lists of items in it, or ingredients and cooking steps.##### Tools for MVP
+(List the tools, frameworks, libraries, APIs, modules, resources, languages, etc that will be used to create your MVP. Be specific.)
+ *React and JavaScript most likely. I might make it out of C# MVC but i think this is better suited for React and JavaScript.
+
+
+
+##### Additional Features
+(If you finish developing your MVP and have time to spare, what features do you want to work on next? Be specific.)
+Additional features would be to create a supporters section where registered users could go and get more in-depth knowledge on a project or recipe.
+ Pictures for each including the ability to upload a picture or video of the steps. And it be added to the right recipe or crafting area.
+
+Ability to 
+##### Tools for Additional Features
+(List the tools, frameworks, libraries, APIs, modules, resources, languages, etc that will be used to create your additional features. Be specific.)
+ * might need a mySql database for photos and video urls to link them to recipe or crafting projects.
+ *
+ *
+
+##### Additional Information
+
+This project is based off the wants my wife wants for her website. She wants me to create a site her and her friends have been wanting to visit for sometime now. She is getting into the content creating market so we came up with the plan to include that idea with her content creation so she can market herself as well as for people to get recipes and crafting steps with out having to read stories first.
+
+
+
+
+
+
+
 reasearch for Capstone.
 Sat Down with Sara Schaaf. Talked to her about what she wanted for her site. made a site diagram 
 (picture will go here )
