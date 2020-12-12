@@ -40,6 +40,10 @@ found this thru google on helping make a dynamic form thru google https://dev.to
 
 https://goshakkk.name/array-form-inputs/ more research 
 
+researching Contact us mail smtp transfer using firebase. good little read https://pantaley.com/blog/How-to-integrate-Serverless-contact-form-using-Firebase-Cloud-functions-in-React/
+
+https://pantaley.com/blog/How-to-integrate-Serverless-contact-form-using-Firebase-Cloud-functions-in-React/
+
 
 
 
