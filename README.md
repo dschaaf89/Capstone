@@ -38,6 +38,9 @@ trying to figure out how to store the different lists in firebase too
 
 found this thru google on helping make a dynamic form thru google https://dev.to/kahawaiikailana/creating-a-react-dynamically-controlled-form-5dcc
 
+https://goshakkk.name/array-form-inputs/ more research 
+
+
 
 
 
