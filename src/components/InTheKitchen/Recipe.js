@@ -2,16 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Recipe(props) {
+  console.log(props)
   return (
     <React.Fragment>
       <div onClick={() => props.whenRecipeClicked(props.id)}>
-        <h1>{props.recipeName}</h1>
-        <h3>{props.ingredients.map((item, index) => {
-          return (
-            <li key={index}>{item}</li>
-          )
-        })}
-        </h3>
+        <h1>{props.name}</h1>
+        <h3>{props.ingredients}</h3>
+        <h3>{props.steps}</h3>
+        <h3>{props.description}</h3>
 
 
       </div>
@@ -21,9 +19,11 @@ function Recipe(props) {
 }
 
 Recipe.PropType = {
-  recipeName: PropTypes.string,
-  ingredients: PropTypes.array,
-  steps: PropTypes.array
+  whenRecipeClicked:PropTypes.func,
+  name: PropTypes.string,
+  ingredients: PropTypes.string,
+  steps: PropTypes.string
+
 
 }
 

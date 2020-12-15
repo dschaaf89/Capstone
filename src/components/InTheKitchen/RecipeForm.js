@@ -1,15 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useFirestore } from 'react-redux-firebase'
+import ReusableForm from "./ReusableForm";
 
 
 function RecipeForm(props){
   const firestore = useFirestore();
 
   function addRecipeToFirestore(event) {
+    console.log(event)
     event.preventDefault();
     props.onRecipeCreation();
-    return firestore.collection('Recipe').add(
+    return firestore.collection('recipes').add(
     {
       name: event.target.name.value,
       description:event.target.description.value,
@@ -19,25 +21,9 @@ function RecipeForm(props){
   }
   return (
     <React.Fragment>
-      <form onSubmit = {addRecipeToFirestore}>
-        <input
-          type='text'
-          name='recipeName'
-          placeholder='recipeName' />
-        <input
-          type='text'
-          name='description'
-          placeholder='Description' />
-        <input
-          type='text'
-          name='ingredient'
-          placeholder='ingredient.' />
-          <textarea
-          type='text'
-          name='description'
-          placeholder='Description' />
-        <button type='submit'>Submit</button>
-      </form>
+      <ReusableForm 
+        formSubmissionHandler={addRecipeToFirestore}
+        buttonText="Add" />
     </React.Fragment>
   )
   
@@ -46,6 +32,6 @@ function RecipeForm(props){
 
 RecipeForm.propTypes = {
   onRecipeCreation: PropTypes.func
-};
+}
 
 export default RecipeForm;

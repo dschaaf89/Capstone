@@ -3,7 +3,7 @@
 #### Sara’s Corner
 
 ##### Description:
-This project was an idea my wife came up with as she aspires to be a crafting and Recipe Content Creator and came up with this idea as she was scrolling thru hundreds of recipe and crafting sites. Her and her friends hate having to comb thru stories just to get to the good stuff such as recipe’s and instructions on how to make certain things either crafting or in the kitchen. So she wants to start a new trend. The recipe and the steps frist then a story about the product or video.
+This project was an idea my wife came up with as she aspires to be a crafting and Recipe Content Creator and came up with this idea as she was scrolling thru hundreds of recipe and crafting sites. Her and her friends hate having to comb thru stories just to get to the good stuff such as recipe’s and instructions on how to make certain things either crafting or in the kitchen. So she wants to start a new trend. The recipe and the steps first then a story about the product or video.
 
 ##### Use Case
 The main use for this website would be for those who want to learn how to make something craftwise or in the kitchen. What my wife says is that it will bring a midwestern charm to life in the City. the Simplistic of it all. Problems that i might face are creating a dynamic form so that she can add bigger recipe’s that need lots of ingredients or steps to make a crafting idea. Also being able to upload pics and video to a page. (Who are the main users? What problems are they facing that you will solve? What will it do for users? What is the purpose/goal of the project?)

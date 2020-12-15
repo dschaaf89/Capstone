@@ -8,6 +8,7 @@ return(
    
   <React.Fragment>
      <Navbar />
+     <InTheKitchenController/>
      
   </React.Fragment>
 );

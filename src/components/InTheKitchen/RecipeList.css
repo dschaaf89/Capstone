@@ -1,0 +1,10 @@
+.recipeList{
+  background-image: url(https://webstockreview.net/images/label-clipart-chalkboard-1.jpg);
+  background-repeat: no-repeat;
+  margin-left: 25%;
+  
+}
+.recipeItem{
+  text-align: center;
+  color: white;
+}

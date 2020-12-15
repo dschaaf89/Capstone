@@ -1,0 +1,136 @@
+import React from 'react';
+import RecipeForm from './RecipeForm';
+import RecipeList from './RecipeList';
+import RecipeDetail from './RecipeDetail';
+import { connect } from 'react-redux';
+import EditRecipeForm from './EditRecipeForm';
+import * as a from './../actions';
+import { withFirestore, isLoaded } from 'react-redux-firebase'
+
+
+
+class InTheKitchenController extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedRecipe: null,
+      editing: false
+    };
+  }
+
+  // componentDidMount() {
+  //   this.waitTimeUpdateTimer = setInterval(() =>
+  //     this.updateRecipeElapsedWaitTime(),
+  //   60000
+  //   );
+  // }
+
+  // componentWillUnmount(){
+  //   clearInterval(this.waitTimeUpdateTimer);
+  // }
+
+  // updateRecipeElapsedWaitTime = () => {
+  //   const { dispatch } = this.props;
+  //   Object.values(this.props.masterRecipeList).forEach(recipe => {
+  //     const newFormattedWaitTime = recipe.timeOpen.fromNow(true);
+  //     const action = a.updateTime(recipe.id, newFormattedWaitTime);
+  //     dispatch(action);
+  //   });
+  // }
+
+  handleClick = () => {
+    if (this.state.selectedRecipe != null) {
+      this.setState({
+        selectedRecipe: null,
+        editing: false
+      });
+    } else {
+      const { dispatch } = this.props;
+      const action = a.toggleForm();
+      dispatch(action);
+    }
+  }
+
+  handleAddingNewRecipeToList = (newRecipe) => {
+    const { dispatch } = this.props;
+    const action = a.toggleForm();
+    dispatch(action);
+  }
+
+  handleChangingSelectedRecipe = (id) => {
+    this.props.firestore.get({collection: 'recipes', doc: id}).then((recipe) => {
+      const firestoreRecipe = {
+        names: recipe.get("names"),
+        ingredients: recipe.get("ingredients"),
+        steps: recipe.get("steps"),
+        description:recipe("description"),
+        id: recipe.id
+      }
+      this.setState({selectedRecipe: firestoreRecipe });
+    });
+  }
+
+  handleEditClick = () => {
+    this.setState({editing: true});
+  }
+
+  handleEditingRecipeInList = (recipeToEdit) => {
+    const { dispatch } = this.props;
+    const action = a.addRecipe(recipeToEdit);
+    dispatch(action);
+    this.setState({
+      editing: false,
+      selectedRecipe: null
+    });
+  }
+
+  handleDeletingRecipe = (id) => {
+    this.props.firestore.delete({collection: 'recipes', doc: id});
+    this.setState({selectedRecipe: null});
+  }
+
+  render(){
+  
+    let currentlyVisibleState = null;
+    let buttonText = null;
+    if (this.state.editing ) {      
+      currentlyVisibleState = <EditRecipeForm recipe = {this.state.selectedRecipe} onEditRecipe = {this.handleEditingRecipeInList} />
+      buttonText = "Return to Recipe List";
+    } else if (this.state.selectedRecipe != null) {
+      currentlyVisibleState = 
+      <RecipeDetail 
+        recipe = {this.state.selectedRecipe} 
+        onClickingDelete = {this.handleDeletingRecipe} 
+        onClickingEdit = {this.handleEditClick} />
+      buttonText = "Return to Recipe List";
+    } else if (this.props.formVisibleOnPage) {
+      currentlyVisibleState = <RecipeForm onRecipeCreation={this.handleAddingNewRecipeToList}  />;
+      buttonText = "Return to Recipe List";
+    } else {
+      currentlyVisibleState = <RecipeList  onRecipeSelection={this.handleChangingSelectedRecipe} />;
+      buttonText = "Add Recipe";
+    }
+    return (
+      <React.Fragment>
+        {currentlyVisibleState}
+        <button onClick={this.handleClick}>{buttonText}</button>
+      </React.Fragment>
+    );
+  }
+}
+
+
+
+InTheKitchenController.propTypes = {
+};
+
+const mapStateToProps = state => {
+  return {
+    formVisibleOnPage: state.formVisibleOnPage
+  }
+}
+
+InTheKitchenController = connect(mapStateToProps)(InTheKitchenController);
+
+export default withFirestore(InTheKitchenController);
