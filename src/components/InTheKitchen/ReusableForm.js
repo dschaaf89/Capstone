@@ -13,15 +13,17 @@ function ReusableForm(props) {
           defaultValue={props.name}
           />
             <textarea
-
           name='ingredients'
-          placeholder='ingredients' />
+          placeholder='ingredients' 
+          defaultValue={props.ingredients}/>
         <textarea
           name='steps'
-          placeholder='steps' />
+          placeholder='steps'
+          defaultValue={props.steps} />
           <textarea
           name='description'
-          placeholder='description' />
+          placeholder='description' 
+          defaultValue={props.description}/>
           <select id="type" name="type">
         <option value="breakfast">breakfast</option>
         <option value="lunch">lunch</option>
