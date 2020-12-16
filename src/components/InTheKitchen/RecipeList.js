@@ -12,24 +12,33 @@ function RecipeList(props) {
   const recipes = useSelector(state => state.firestore.ordered.recipes);
   if (isLoaded(recipes)) {
     return (
-      <div className = "recipeList">
       <React.Fragment>
-        <hr />
-        {recipes.map((recipe) => {
-          return(
-            <div className="recipeItem">
-          <Recipe
-            whenRecipeClicked={props.onRecipeSelection}
-            name={recipe.name}
-            description={recipe.description}
-            id={recipe.id}
-            key={recipe.id} />
+        
+        <div id ="recipeList">
+         
+          <div className="card">
+            <div className="container">
+           
+              {recipes.map((recipe) => {
+                return(
+                
+                <Recipe
+                  whenRecipeClicked={props.onRecipeSelection}
+                  name={recipe.name}
+                  // ingredients= {recipe.ingredients}
+                  // steps={recipe.steps}
+                  description={recipe.description}
+                  id={recipe.id}
+                  key={recipe.id} />
+                )
+              })}
             </div>
-          )
-        })}
-       
+          </div>
+        </div>
       </React.Fragment>
-      </div>
+      
+    
+      
     );
   } else {
     return (

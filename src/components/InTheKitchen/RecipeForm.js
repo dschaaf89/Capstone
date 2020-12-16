@@ -16,11 +16,13 @@ function RecipeForm(props){
       name: event.target.name.value,
       description:event.target.description.value,
       ingredients:event.target.ingredients.value,
-      steps:event.target.steps.value
+      steps:event.target.steps.value,
+      type:event.target.type.value
     });
   }
   return (
     <React.Fragment>
+       
       <ReusableForm 
         formSubmissionHandler={addRecipeToFirestore}
         buttonText="Add" />

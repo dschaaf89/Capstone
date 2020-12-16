@@ -19,6 +19,11 @@ function ReusableForm(props) {
           <textarea
           name='description'
           placeholder='description' />
+          <select id="type" name="type">
+        <option value="breakfast">breakfast</option>
+        <option value="lunch">lunch</option>
+        <option value="dinner">dinner</option>
+        </select>
           
         <button type='submit'>{props.buttonText}</button>
       </form>

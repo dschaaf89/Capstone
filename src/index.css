@@ -12,3 +12,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#recipeList{
+  text-align: center;
+  color: white;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.25rem;
+
+
+ 
+ 
+  
+}
+.card{
+background-image: url(https://image.architonic.com/img_pro2-4/155/9160/dd110306-b.jpg);
+width: 75%;
+height: 400px;
+margin-left: 5%;
+padding: 5%;
+overflow-y: scroll;
+margin-bottom: 5%;
+border-radius: 5%;
+}
+#recipeDetails{
+  color: white;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+
+}
+
+  
+

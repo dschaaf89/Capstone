@@ -19,25 +19,6 @@ class InTheKitchenController extends React.Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.waitTimeUpdateTimer = setInterval(() =>
-  //     this.updateRecipeElapsedWaitTime(),
-  //   60000
-  //   );
-  // }
-
-  // componentWillUnmount(){
-  //   clearInterval(this.waitTimeUpdateTimer);
-  // }
-
-  // updateRecipeElapsedWaitTime = () => {
-  //   const { dispatch } = this.props;
-  //   Object.values(this.props.masterRecipeList).forEach(recipe => {
-  //     const newFormattedWaitTime = recipe.timeOpen.fromNow(true);
-  //     const action = a.updateTime(recipe.id, newFormattedWaitTime);
-  //     dispatch(action);
-  //   });
-  // }
 
   handleClick = () => {
     if (this.state.selectedRecipe != null) {
@@ -59,15 +40,16 @@ class InTheKitchenController extends React.Component {
   }
 
   handleChangingSelectedRecipe = (id) => {
-    this.props.firestore.get({collection: 'recipes', doc: id}).then((recipe) => {
+    this.props.firestore.get({collection:'recipes', doc : id}).then((recipe)=>{
       const firestoreRecipe = {
-        names: recipe.get("names"),
-        ingredients: recipe.get("ingredients"),
-        steps: recipe.get("steps"),
-        description:recipe("description"),
+        name: recipe.get('name'),
+        ingredients: recipe.get('ingredients'),
+        steps: recipe.get('steps'),
+        description: recipe.get('description'),
+        type:recipe.get('type'),
         id: recipe.id
       }
-      this.setState({selectedRecipe: firestoreRecipe });
+      this.setState({selectedRecipe:firestoreRecipe});
     });
   }
 
@@ -91,7 +73,6 @@ class InTheKitchenController extends React.Component {
   }
 
   render(){
-  
     let currentlyVisibleState = null;
     let buttonText = null;
     if (this.state.editing ) {      
@@ -109,6 +90,7 @@ class InTheKitchenController extends React.Component {
       buttonText = "Return to Recipe List";
     } else {
       currentlyVisibleState = <RecipeList  onRecipeSelection={this.handleChangingSelectedRecipe} />;
+      console.log(currentlyVisibleState);
       buttonText = "Add Recipe";
     }
     return (
