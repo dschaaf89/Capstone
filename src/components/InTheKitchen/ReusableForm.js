@@ -2,15 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function ReusableForm(props) {
-  console.log(props)
+  console.log('reusable',props);
   return (
     <React.Fragment>
       <form onSubmit={props.formSubmissionHandler}>
         <input
           type='text'
           name='name'
-          placeholder='Name' />
+          placeholder='Name' 
+          defaultValue={props.name}
+          />
             <textarea
+
           name='ingredients'
           placeholder='ingredients' />
         <textarea
