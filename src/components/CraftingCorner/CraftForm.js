@@ -13,11 +13,14 @@ function CraftForm(props){
    
     console.log(event.target.getElementsByClassName("materials"))
     const materials =[];
+    const steps = [];
+    const test2 = event.target.getElementsByClassName("steps")
     const test = event.target.getElementsByClassName("materials")
     console.log(test.length)
     for(let i = 0 ; i < test.length ; i++ )
     {
       materials.push(test[i].value);
+      steps.push(test2[i].value);
     }
     
      console.log(materials); 
@@ -26,8 +29,9 @@ function CraftForm(props){
     //this.props.onSurveyCreation();
     return firestore.collection('crafts').add(
       {
-        Name:event.target.name.value,
+        name:event.target.name.value,
         materials: materials,
+        steps:steps,
         description:event.target.description.value
 
       }

@@ -7,7 +7,7 @@ function Recipe(props) {
   return (
     <React.Fragment>
      
-      <div onClick={() => props.whenRecipeClicked(props.id)}>
+      <div onClick={() => props.whenCraftClicked(props.id)}>
         <h1>{props.name}</h1>
         <h3>{props.materials}</h3>
         <h3>{props.steps}</h3>
@@ -20,7 +20,7 @@ function Recipe(props) {
 }
 
 Recipe.PropType = {
-  whenRecipeClicked:PropTypes.func,
+  whenCraftClicked:PropTypes.func,
   name: PropTypes.string,
   ingredients: PropTypes.array,
   steps: PropTypes.array,

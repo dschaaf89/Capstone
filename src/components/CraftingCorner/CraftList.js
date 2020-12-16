@@ -16,7 +16,7 @@ function CraftList(props) {
        
         <div id ="craftList">
          
-          <div className="card">
+          <div className="card1">
           <h1>Crafts:</h1>
             <div className="container">
            

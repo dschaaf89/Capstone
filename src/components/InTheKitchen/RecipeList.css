@@ -1,1 +1,15 @@
+.recipeList{
+  background: url(https://i.pinimg.com/originals/e6/c3/ff/e6c3ff4d6cdd6380b3e42b5c02e3183c.jpg) ;
 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 300%;
+  text-align: center;
+  color: white;
+  
+  
+}
+.recipeItem{
+  
+}

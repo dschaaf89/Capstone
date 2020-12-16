@@ -29,6 +29,23 @@ class ReusableForm extends React.Component {
                  CLICK ME TO ADD MATERIALS
              </button>
           </div>
+          <div id="dynamicInput">
+            {this.state.inputs.map(q => 
+              <input
+              className='steps'
+              type='text'
+              name={'steps'+  q}
+              defaultValue= ''
+              placeholder='' />
+              )}
+              <button onClick={ () => this.appendInput() } type='button'>
+                 CLICK ME TO ADD STEPS
+             </button>
+          </div>
+           <textarea
+          name='description'
+          placeholder='description' />
+
           
           <button type='submit'>{this.props.buttonText}</button>
         </form>
