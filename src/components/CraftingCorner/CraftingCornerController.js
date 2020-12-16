@@ -43,7 +43,7 @@ class InTheKitchenController extends React.Component {
     this.props.firestore.get({collection:'crafts', doc : id}).then((craft)=>{
       const firestoreCraft = {
         name: craft.get('name'),
-        ingredients: craft.get('ingredients'),
+        materials: craft.get('materials'),
         steps: craft.get('steps'),
         description: craft.get('description'),
         type:craft.get('type'),

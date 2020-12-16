@@ -13,8 +13,20 @@ function CraftDetail(props){
           <div id="craftDetails">
           <h1>{craft.name} Details</h1>
           <p>description: {craft.description}</p>
-          <h2>ingredients: {craft.ingredients}</h2>
-          <h3>steps: {craft.steps}</h3>
+          <h2>materials:<ul> 
+           {craft.materials.map((material)=>
+              <li>{material}</li>)
+          }
+          </ul>
+          </h2>
+          <h3>steps: 
+          <ul> 
+           {craft.steps.map((step)=>
+              <li>{step}</li>)
+          }
+         
+          </ul>
+          </h3>
           
           
           
