@@ -1,0 +1,15 @@
+.craftList{
+  background: url(https://st3.depositphotos.com/12127248/17138/i/1600/depositphotos_171380330-stock-photo-crafting-christmas-gifts-white-wooden.jpg) ;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 300%;
+  text-align: center;
+  color: white;
+  
+  
+}
+.recipeItem{
+  
+}

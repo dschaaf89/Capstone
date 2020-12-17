@@ -22,8 +22,8 @@ function Recipe(props) {
 Recipe.PropType = {
   whenCraftClicked:PropTypes.func,
   name: PropTypes.string,
-  ingredients: PropTypes.array,
-  steps: PropTypes.array,
+  materials:PropTypes.array,
+   steps: PropTypes.array,
   type:propTypes.string
 
 

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class ReusableForm extends React.Component {
+class ReusableCraftForm extends React.Component {
   constructor(props) {
           super(props);
           this.state = { inputs: ['0'] };
@@ -15,28 +15,30 @@ class ReusableForm extends React.Component {
           <input
             type='text'
             name='name'
-            placeholder='Name of Craft' />
+            placeholder='Name of Craft' 
+            defaultValue ={this.props.name}/>
           <div id="dynamicInput">
-            {this.state.inputs.map(q => 
+            {this.props.materials.map(x => 
               <input
               className='materials'
               type='text'
-              name={'materials'+  q}
-              defaultValue= ''
+              name={'materials'+  x}
+              defaultValue= {x}
               placeholder='' />
               )}
               <button onClick={ () => this.appendInput() } type='button'>
                  CLICK ME TO ADD MATERIALS
              </button>
           </div>
-          <div id="dynamicInput">
-            {this.state.inputs.map(q => 
+          <div id="dynamicInput2">
+            {this.props.steps.map(x => 
               <input
               className='steps'
               type='text'
-              name={'steps'+  q}
-              defaultValue= ''
+              name={'steps'+  x}
+              defaultValue= {x}
               placeholder='' />
+              
               )}
               <button onClick={ () => this.appendInput() } type='button'>
                  CLICK ME TO ADD STEPS
@@ -44,7 +46,8 @@ class ReusableForm extends React.Component {
           </div>
            <textarea
           name='description'
-          placeholder='description' />
+          placeholder='description'
+          defaultValue= {this.props.description} />
 
           
           <button type='submit'>{this.props.buttonText}</button>
@@ -62,9 +65,9 @@ class ReusableForm extends React.Component {
 
 }
 
-ReusableForm.propTypes = {
+ReusableCraftForm.propTypes = {
   formSubmissionHandler: PropTypes.func,
   buttonText: PropTypes.string
 };
 
-export default ReusableForm;
+export default ReusableCraftForm;
