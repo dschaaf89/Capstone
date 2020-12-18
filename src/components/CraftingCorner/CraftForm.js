@@ -42,6 +42,8 @@ function CraftForm(props){
   return (
     <React.Fragment>
       <ReusableCraftForm 
+        materials= {[]}
+        steps= {[]}
         formSubmissionHandler={addCraftToFireStore}
         buttonText="Submit" />
     </React.Fragment>
