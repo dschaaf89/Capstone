@@ -86,8 +86,9 @@ https://pantaley.com/blog/How-to-integrate-Serverless-contact-form-using-Firebas
 
 
 Friday 12/18
-hard to concentrate this morning. opened the project in the state i left it, and it was not working on the add or edit parts of the craft forms. started working on about me and contact forms. started researching how to make a ecommerce site attached to this site so customer could sell their crafts on it.
+hard to concentrate this morning. opened the project in the state i left it, and it was not working on the add or edit parts of the craft forms. started working on about me and contact forms. started researching how to make a ecommerce site attached to this site so customer could sell their crafts on it. 
 
+https://www.youtube.com/watch?v=7gQay39krqY
 
 
 
