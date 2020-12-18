@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(https://images-na.ssl-images-amazon.com/images/I/A1pThW9w3mL._AC_SL1500_.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
