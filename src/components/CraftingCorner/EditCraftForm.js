@@ -17,6 +17,7 @@ function EditCraftForm (props) {
       steps: event.target.steps.value,
       description:event.target.description.value,
     }
+    console.log(propertiesToUpdate);
     return firestore.update({collection: 'crafts', doc: recipe.id }, propertiesToUpdate)
   }
   console.log("here in the form",props)

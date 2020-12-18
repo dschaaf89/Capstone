@@ -48,7 +48,7 @@ class ReusableCraftForm extends React.Component {
               CLICK ME TO ADD STEPS
              </button>
           </div>
-            <button type='submit'>{this.props.buttonText}</button>
+        <button type='submit'>{this.props.buttonText}</button>
         </form>
 
       </React.Fragment>
