@@ -11,8 +11,8 @@ return(
   <React.Fragment>
      <Navbar />
      {/* <InTheKitchenController/> */}
-     {/* <CraftingCornerController /> */}
-     <AboutMe />
+     <CraftingCornerController />
+     {/* <AboutMe /> */}
      
   </React.Fragment>
 );

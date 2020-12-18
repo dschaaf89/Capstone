@@ -5,20 +5,21 @@ import {useFirestore} from 'react-redux-firebase'
 
 function EditCraftForm (props) {
   const firestore = useFirestore();
-  const { recipe } = props;
+  const { craft } = props;
 
 
   function handleEditCraftFormSubmission(event) {
     event.preventDefault();
+    console.log(event.target.materials)
     props.onEditCraft();
     const propertiesToUpdate = {
       name: event.target.name.value,
       materials: event.target.materials.value,
       steps: event.target.steps.value,
-      description:event.target.description.value,
+      description:event.target.description.value
     }
     console.log(propertiesToUpdate);
-    return firestore.update({collection: 'crafts', doc: recipe.id }, propertiesToUpdate)
+    return firestore.update({collection: 'crafts', doc: craft.id }, propertiesToUpdate)
   }
   console.log("here in the form",props)
   return (

@@ -26,7 +26,7 @@ class ReusableCraftForm extends React.Component {
               <input
                 className='materials'
                 type='text'
-                name={'materials' + x}
+                name={'materials'}
                 defaultValue={x}
                 placeholder='' />
             )}
@@ -39,7 +39,7 @@ class ReusableCraftForm extends React.Component {
               <input
                 className='steps'
                 type='text'
-                name={'steps' + x}
+                name={'steps'}
                 defaultValue={x}
                 placeholder='' />
 
@@ -48,6 +48,11 @@ class ReusableCraftForm extends React.Component {
               CLICK ME TO ADD STEPS
              </button>
           </div>
+          <textarea
+            type='text'
+            name='description'
+            placeholder='description'
+            defaultValue={this.props.description} />
         <button type='submit'>{this.props.buttonText}</button>
         </form>
 
