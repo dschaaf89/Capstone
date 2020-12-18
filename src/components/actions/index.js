@@ -21,3 +21,19 @@ export const addRecipe = (recipe) => {
     id: id
   }
 }
+export const addCraft = (craft) => {
+  const { names, materials, steps, description, id } = craft;
+  return {
+    type: c.ADD_CRAFT,
+    names: names,
+    materials: materials,
+    steps: steps,
+    description:description,
+    id: id
+  }
+}
+
+export const deleteCraft = id => ({
+  type: c.DELETE_CRAFT,
+  id
+});
