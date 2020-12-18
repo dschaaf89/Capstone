@@ -13,7 +13,10 @@ return(
    
   <React.Fragment>
     <Header/>
+    <div className="main">
     <Homepage/>
+    </div>
+   
      
   </React.Fragment>
 );
