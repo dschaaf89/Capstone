@@ -91,6 +91,19 @@ hard to concentrate this morning. opened the project in the state i left it, and
 https://www.youtube.com/watch?v=7gQay39krqY
 
 
+since i was having a hard day today concentrating on backend work i worked on the front end splash page or home page. it turned out better then i thought it would. 
+
+needs still to get to MVP
+
+routeing
+contact page
+about me page
+better styling of the recipes/crafts
+
+added to what would like to have. a full on Store to sell crafts on.
+
+
+
 
 
 
