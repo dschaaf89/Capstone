@@ -5,6 +5,7 @@ import Homepage from '../pages/Homepage';
 //import './App.css';
 import './default.scss';
 import Header from "./Header";
+import Footer from './../components/Footer';
 import Registration from '../pages/Registration';
  import InTheKitchenController from './InTheKitchen/InTheKitchenController';
  import CraftingCornerController from './CraftingCorner/CraftingCornerController';
@@ -33,8 +34,9 @@ return(
       <Route path='/craftstore' component={CraftStore}/> */}
     </Switch>
     </div>
-      
-     
+    <div id="footer">
+     <Footer/>
+     </div>
   </React.Fragment>
 );
    

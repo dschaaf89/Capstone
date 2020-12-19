@@ -69,4 +69,14 @@ border-radius: 5%;
   font-family: 'Great Vibes', cursive;
 
 }
-
+#footer {
+  text-align: center;
+  position: fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  
+  background-color:rgba(250, 248, 206, 0.568);
+  font-family: 'Great Vibes', cursive;
+  margin-top:8px;
+}

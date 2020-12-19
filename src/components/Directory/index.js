@@ -17,7 +17,7 @@ const Directory = props => {
             backgroundImage: `url(${Food})`
           }}
         >
-          <a>
+          <a href = '/inthekitchen'>
             InTheKitchen
           </a>
         </div>
@@ -27,7 +27,7 @@ const Directory = props => {
             backgroundImage: `url(${Craft})`
           }}
         >
-          <a>
+          <a href='/craftingcorner'>
             CraftingCorner
           </a>
         </div>
@@ -37,7 +37,7 @@ const Directory = props => {
             backgroundImage: `url(${Travel})`
           }}
         >
-          <a>
+          <a href ='/mygypsyheart'>
             MyGypsyHeart
           </a>
         </div>
@@ -47,7 +47,7 @@ const Directory = props => {
             backgroundImage: `url(${AboutMe})`
           }}
         >
-          <a>
+          <a href='/aboutme'>
             AboutMe
           </a>
         </div>
@@ -57,8 +57,8 @@ const Directory = props => {
             backgroundImage: `url(${CraftStore})`
           }}
         >
-          <a>
-            Craft-Store
+          <a href='/store'>
+            Store
           </a>
         </div>
       </div>
