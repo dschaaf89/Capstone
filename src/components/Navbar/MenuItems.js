@@ -1,32 +1,32 @@
 export const MenuItems = [
     {
         title:"Home",
-        link:'#',
+        link:'/',
         cName:'nav-links'
     },
     {
         title:"In the Kitchen",
-        link:'#',
+        link:'/inthekitchen',
         cName:'nav-links'
     },
     {
         title:"Crafting Corner",
-        link:'#',
+        link:'/craftingcorner',
         cName:'nav-links'
     },
     {
-        title:"My Gyspy Heart",
-        link:'#',
+        title:"My Gypsy Heart",
+        link:'/mygypsyheart',
         cName:'nav-links'
     },
     {
         title:"About Me",
-        link:'#',
+        link:'/aboutme',
         cName:'nav-links'
     },
     {
         title:"Contact Me",
-        link:'#',
+        link:'/contactme',
         cName:'nav-links'
     },
     {

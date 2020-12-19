@@ -5,6 +5,7 @@ import AboutMe from './../../assets/AboutMe.jpg';
 import Travel from './../../assets/Travel.jpeg';
 import CraftStore from "./../../assets/Craft-Store.jpg";
 import './styles.scss';
+import { Link } from 'react-router-dom';
 
 const Directory = props => {
   return (
