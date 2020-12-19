@@ -6,10 +6,9 @@ import Homepage from '../pages/Homepage';
 import './default.scss';
 import Header from "./Header";
 import Registration from '../pages/Registration';
-// import Navbar from './Navbar/Navbar';
-// import InTheKitchenController from './InTheKitchen/InTheKitchenController';
-// import CraftingCornerController from './CraftingCorner/CraftingCornerController';
-// import AboutMe from './AboutMe/AboutMe';
+ import InTheKitchenController from './InTheKitchen/InTheKitchenController';
+ import CraftingCornerController from './CraftingCorner/CraftingCornerController';
+ import AboutMe from './AboutMe/AboutMe';
 
 
 
@@ -23,6 +22,7 @@ return(
       
       <Route exact path='/' component={Homepage}/>
       <Route path='/registration' component={Registration}/>
+      <Route path='/inthekitchen' component={InTheKitchenController}/>
     </Switch>
     </div>
       
