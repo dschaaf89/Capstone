@@ -105,6 +105,7 @@ added to what would like to have. a full on Store to sell crafts on.
 
 12/19
 I started the day off rough, had an error so i went back a couple of commits and fixed it. then took some time to figure out how to do file uploads to firebase. going to try to get my forms able to upload photos for recipes and crafts to firebase so i could just call the database for the photos instead of storing them in the project.
+https://www.youtube.com/watch?v=8r1Pb6Ja90o
 
 
 
