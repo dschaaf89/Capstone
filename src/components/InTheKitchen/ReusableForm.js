@@ -34,6 +34,12 @@ function ReusableForm(props) {
           <option value="lunch">lunch</option>
           <option value="dinner">dinner</option>
         </select> 
+        <input
+          type='text'
+          name='Url'
+          placeholder='Url'
+          defaultValue={props.url}
+        />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>

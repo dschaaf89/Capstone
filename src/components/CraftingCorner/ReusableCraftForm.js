@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import FileUploadForm from '../../components/FileUploadForm';
 class ReusableCraftForm extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +18,7 @@ class ReusableCraftForm extends React.Component {
     {
     return (
       <React.Fragment>
+        <FileUploadForm/>
         <form onSubmit={this.props.formSubmissionHandler}>
           <input
             type='text'
@@ -66,6 +67,7 @@ class ReusableCraftForm extends React.Component {
 else{
   return (
     <React.Fragment>
+      <FileUploadForm/>
       <form onSubmit={this.props.formSubmissionHandler}>
         <input
           type='text'

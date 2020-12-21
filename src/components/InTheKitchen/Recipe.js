@@ -8,6 +8,7 @@ function Recipe(props) {
     <React.Fragment>
      
       <div onClick={() => props.whenRecipeClicked(props.id)}>
+        <img src={props.Url}/>
         <h1>{props.name}</h1>
         <h3>{props.ingredients}</h3>
         <h3>{props.steps}</h3>
@@ -24,7 +25,8 @@ Recipe.PropType = {
   name: PropTypes.string,
   ingredients: PropTypes.string,
   steps: PropTypes.string,
-  type:propTypes.string
+  type:propTypes.string,
+  Url:PropTypes.string
 
 
 }
