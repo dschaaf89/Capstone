@@ -34,25 +34,7 @@ function BioForm(props){
           type='text'
           name='name'
           defaultValue= {b[0].name} />
-        <input
-          type='text'
-          name='github'
-          defaultValue= {b[0].github} />
-
-        <input
-          name='linkedin'
-          defaultValue= {b[0].linkedin} />
-
-          <input
-          type='text'
-          name='email'
-          defaultValue= {b[0].email} />
-          <input
-          type='text'
-          hidden
-          name='id'
-          defaultValue= {b[0].id} />
-
+       
           <textarea
           type='text'
           name='about'

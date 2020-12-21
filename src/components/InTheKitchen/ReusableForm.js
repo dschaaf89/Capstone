@@ -1,13 +1,15 @@
 
 import PropTypes from "prop-types";
-import React, { useState } from 'react';
-import { storage } from '../../firebase';
+import React  from 'react';
+import FileUploadForm from '../../components/FileUploadForm';
+
 
 function ReusableForm(props) {
-  console.log('reusable', props);
-  
+  console.log('reusable', props);  
   return (
+   
     <React.Fragment>
+       <FileUploadForm/>
       <form onSubmit={props.formSubmissionHandler}>
         <input
           type='text'

@@ -47,6 +47,7 @@ class InTheKitchenController extends React.Component {
         steps: recipe.get('steps'),
         description: recipe.get('description'),
         type:recipe.get('type'),
+        url:recipe.get('url'),
         id: recipe.id
       }
       this.setState({selectedRecipe:firestoreRecipe});

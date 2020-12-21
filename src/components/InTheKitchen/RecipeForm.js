@@ -8,6 +8,7 @@ function RecipeForm(props){
   const firestore = useFirestore();
 
   function addRecipeToFirestore(event) {
+
     console.log(event)
     event.preventDefault();
     props.onRecipeCreation();
@@ -17,7 +18,8 @@ function RecipeForm(props){
       description:event.target.description.value,
       ingredients:event.target.ingredients.value,
       steps:event.target.steps.value,
-      type:event.target.type.value
+      type:event.target.type.value,
+      url:event.target.name.value
     });
   }
   return (
