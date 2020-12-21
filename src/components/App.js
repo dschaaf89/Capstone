@@ -9,6 +9,7 @@ import Footer from './../components/Footer';
 import Registration from '../pages/Registration';
  import InTheKitchenController from './InTheKitchen/InTheKitchenController';
  import CraftingCornerController from './CraftingCorner/CraftingCornerController';
+import ContactForm from './ContactUs/ContactForm';
 //  import MyGypsyHeart from '../pages/MyGypsyHeart';
 //  import ContactMe from '../pages/ContactMe';
 //  import CraftStore from '../pages/CraftStore';
@@ -28,6 +29,7 @@ return(
       <Route path='/registration' component={Registration}/>
       <Route path='/inthekitchen' component={InTheKitchenController}/>
       <Route path='/craftingcorner' component={CraftingCornerController}/>
+      <Route path='/contactme' component={ContactForm}/>
       {/* <Route path='/mygypsyheart' component={MyGypsyHeart}/>
       <Route path='/aboutme' component={AboutMe}/>
       <Route path='/contactme' component={ContactMe}/>
