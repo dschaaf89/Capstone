@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import "./ContactForm.css"
 import { useFirestore } from 'react-redux-firebase'
 
 
@@ -33,24 +33,39 @@ const ContactForm = () => {
       
   };
   return(
+    <div className="card3">
+      
     <form className='form' onSubmit={handleSubmit}>
+    <div className="row">
+        <div className="col">
       <h1>Contact Me</h1>
+      <div className="col">
       <label>Name</label>
       <input placeholder="Name" value = {name}
       onChange={(e)=> setName(e.target.value)}
       />
+      </div>
+      <div className="col">
       <label>Email</label>
       <input placeholder="Email" value = {email}
       onChange={(e)=> setEmail(e.target.value)}
       />
+      </div>
+      <div className="col">
       <label>Message</label>
       <textarea placeholder="Message"
       value = {message}
       onChange={(e)=> setMessage(e.target.value)}/>
+      </div>
       
     <button type='submit'style={{background: loader ? "#ccc" : 'rgb (2,2,110)' }}>submit</button>
+    </div>
+    </div>
     </form>
+    </div>
   )
+  
 }
+
 
 export default ContactForm;

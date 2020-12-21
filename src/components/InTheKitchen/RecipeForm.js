@@ -19,7 +19,7 @@ function RecipeForm(props){
       description:event.target.description.value,
       ingredients:event.target.ingredients.value,
       steps:event.target.steps.value,
-      type:event.target.type.value,
+      foodType:event.target.type.value,
       Url:event.target.Url.value
     });
   }

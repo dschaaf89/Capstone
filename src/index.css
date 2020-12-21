@@ -29,11 +29,11 @@ code {
 .card{
 background-image: url(https://image.architonic.com/img_pro2-4/155/9160/dd110306-b.jpg);
 width: 75%;
-height: 400px;
+height: 700px;
 margin-left: 5%;
+margin:0% 15%;
 padding: 5%;
-overflow-y: scroll;
-margin-bottom: 5%;
+overflow-x: hidden;
 border-radius: 5%;
 }
 #recipeDetails{

@@ -1,7 +1,6 @@
 
 import PropTypes from "prop-types";
 import React, { useState } from 'react';
-import FileUploadForm from '../../components/FileUploadForm';
 
 import { storage } from '../../firebase';
 function ReusableForm(props) {
@@ -48,7 +47,6 @@ function ReusableForm(props) {
   return (
    
     <React.Fragment>
-       {/* <FileUploadForm/> */}
        <div>
         <progress value={progress} max="100"/>
           <br/>

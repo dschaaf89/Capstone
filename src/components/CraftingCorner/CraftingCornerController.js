@@ -9,7 +9,7 @@ import { withFirestore, isLoaded } from 'react-redux-firebase'
 
 
 
-class InTheKitchenController extends React.Component {
+class CraftingCornerController extends React.Component {
 
   constructor(props) {
     super(props);
@@ -102,7 +102,7 @@ class InTheKitchenController extends React.Component {
 
 
 
-InTheKitchenController.propTypes = {
+CraftingCornerController.propTypes = {
 };
 
 const mapStateToProps = state => {
@@ -111,6 +111,6 @@ const mapStateToProps = state => {
   }
 }
 
-InTheKitchenController = connect(mapStateToProps)(InTheKitchenController);
+CraftingCornerController = connect(mapStateToProps)(CraftingCornerController);
 
-export default withFirestore(InTheKitchenController);
+export default withFirestore(CraftingCornerController);

@@ -46,7 +46,7 @@ class InTheKitchenController extends React.Component {
         ingredients: recipe.get('ingredients'),
         steps: recipe.get('steps'),
         description: recipe.get('description'),
-        type:recipe.get('type'),
+        foodType:recipe.get('foodType'),
         Url:recipe.get('Url'),
         id: recipe.id
       }
