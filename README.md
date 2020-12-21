@@ -109,6 +109,12 @@ https://www.youtube.com/watch?v=8r1Pb6Ja90o
 
 
 
+12/21
+researching css styles from 220 -3pm.
+
+
+
+
 
 
 
