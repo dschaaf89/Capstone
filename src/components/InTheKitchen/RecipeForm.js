@@ -20,7 +20,7 @@ function RecipeForm(props){
       ingredients:event.target.ingredients.value,
       steps:event.target.steps.value,
       type:event.target.type.value,
-      url:event.target.name.value
+      Url:event.target.Url.value
     });
   }
   return (

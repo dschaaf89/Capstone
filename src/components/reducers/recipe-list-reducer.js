@@ -1,7 +1,7 @@
 import * as c from './../actions/ActionTypes';
 
 export default (state = {}, action) => {
-  const { name, ingredients, steps,description, id} = action;
+  const { name, ingredients, steps,description, id, Url} = action;
   switch (action.type) {
   case c.ADD_RECIPE:
     return Object.assign({}, state, {
