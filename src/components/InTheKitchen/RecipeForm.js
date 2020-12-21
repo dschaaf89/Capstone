@@ -5,34 +5,53 @@ import { useFirestore } from 'react-redux-firebase'
 import ReusableForm from "./ReusableForm";
 
 
+
 function RecipeForm(props){
   const firestore = useFirestore();
 
-  function addRecipeToFirestore(event) {
-
-    console.log(event)
+  function addRecipeToFireStore(event){
     event.preventDefault();
-    props.onRecipeCreation();
-    return firestore.collection('recipes').add(
+   
+    console.log(event.target.getElementsByClassName("ingredients"))
+    const ingredients =[];
+    const steps = [];
+    const test2 = event.target.getElementsByClassName("steps")
+    const test = event.target.getElementsByClassName("ingredients")
+    console.log(test.length)
+    for(let i = 0 ; i < test.length ; i++ )
     {
-      name: event.target.name.value,
-      description:event.target.description.value,
-      ingredients:event.target.ingredients.value,
-      steps:event.target.steps.value,
-      foodType:event.target.type.value,
-      Url:event.target.Url.value
-    });
+      ingredients.push(test[i].value);
+      steps.push(test2[i].value);
+    }
+    
+     console.log(ingredients); 
+    
+   
+    //this.props.onSurveyCreation();
+    return firestore.collection('recipes').add(
+      {
+        name:event.target.name.value,
+        ingredients: ingredients,
+        steps:steps,
+        description:event.target.description.value,
+        url:event.target.url.value
+
+      }
+        
+    )
   }
+
   return (
     <React.Fragment>
-       
+      <div className="card">
       <ReusableForm 
-        formSubmissionHandler={addRecipeToFirestore}
-        buttonText="Add" />
+        ingredients= {[]}
+        steps= {[]}
+        formSubmissionHandler={addRecipeToFireStore}
+        buttonText="Submit" />
+        </div>
     </React.Fragment>
   )
-  
-
 }
 
 RecipeForm.propTypes = {

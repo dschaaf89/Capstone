@@ -12,21 +12,31 @@ function RecipeDetail(props){
         <div className="container">
           <div id="recipeDetails">
           <h1>{recipe.name} Details</h1>
-          <div id ='photo'>
-          <img src ={recipe.Url} alt="picture of food"></img>
-          
-            </div>
-          <h2>type of recipe: {recipe.type}</h2>
+          <img src={recipe.url}></img>
           <p>description: {recipe.description}</p>
-          <h2>ingredients: {recipe.ingredients}</h2>
-          <h3>steps: {recipe.steps}</h3>
+          <h2>ingredients:<ul> 
+           {recipe.ingredients.map((ingredients)=>
+              <li>{ingredients}</li>)
+          }
+          </ul>
+          </h2>
+          <h3>steps: 
+          <ul> 
+           {recipe.steps.map((step)=>
+              <li>{step}</li>)
+          }
+         
+          </ul>
+          </h3>
+          
+          
           
           </div>
         </div> 
       </div>
       
-      <button onClick={ props.onClickingEdit }>Update Recipe</button>
-      <button onClick={()=> onClickingDelete(recipe.id) }>Close Recipe</button>
+      <button onClick={ props.onClickingEdit }>Update recipe</button>
+      <button onClick={()=> onClickingDelete(recipe.id) }>Close recipe</button>
       <hr/>
     </React.Fragment>
   );

@@ -49,9 +49,6 @@ return (
 
     <input type="file" onChange={handleChange}/>
     <button onClick={handleUpload}>Upload</button>
-    <br />
-    {url}
-    <br/>
   </div>
 )
 }

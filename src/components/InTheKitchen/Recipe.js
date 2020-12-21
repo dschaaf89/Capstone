@@ -23,10 +23,10 @@ function Recipe(props) {
 Recipe.PropType = {
   whenRecipeClicked:PropTypes.func,
   name: PropTypes.string,
-  ingredients: PropTypes.string,
-  steps: PropTypes.string,
+  ingredients: PropTypes.array,
+  steps: PropTypes.array,
   foodType:propTypes.string,
-  Url:PropTypes.string
+  url:PropTypes.string
 
 
 }

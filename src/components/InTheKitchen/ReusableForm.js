@@ -1,95 +1,151 @@
-
+import React from "react";
 import PropTypes from "prop-types";
-import React, { useState } from 'react';
+import FileUploadForm from '../../components/FileUploadForm';
+class ReusableForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ingredients: ['0'],
+      steps:['0'],
+      url:''
+      
+    };
+  }
+  test = (e) => {
+    console.log(this.state)
+    this.setState({
+      ingredients: this.state.ingredients,
+      steps: this.state.steps,
+      url:e
+    })
+    console.log(this.state)
+  }
+  render() {
+    console.log(this.props)
+    console.log(this.state)
+    //console.log('this.props.ingredients',this.props.ingredients)
+    if(this.props.ingredients.length === 0)
+    {
+    return (
+      <React.Fragment>
+        <FileUploadForm
+        test={ this.test}/>
+        <form onSubmit={this.props.formSubmissionHandler}>
+          <input
+            type='text'
+            name='name'
+            placeholder='Name of Recipe'
+            defaultValue={this.props.name} />
+          <div id="dynamicInput">
+            {this.state.ingredients.map(x =>
+              <input
+                className='ingredients'
+                type='text'
+                name={'ingredients'+x}
+                defaultValue={x}
+                placeholder='' />
+            )}
+            <button onClick={() => this.appendIngredient()} type='button'>
+              CLICK ME TO ADD ingredients
+            </button>
+          </div>
+          <div id="dynamicInput2">
+            {this.state.steps.map(x =>
+              <input
+                className='steps'
+                type='text'
+                name={'steps'+x}
+                defaultValue={x}
+                placeholder='' />
 
-import { storage } from '../../firebase';
-function ReusableForm(props) {  
+            )}
+            <button onClick={() => this.appendSteps()} type='button'>
+              CLICK ME TO ADD STEPS
+             </button>
+          </div>
+          <textarea
+            type='text'
+            name='description'
+            placeholder='description'
+            defaultValue={this.props.description} />
+            <input
+            type='text'
+            name='url'
+            placeholder='url'
+            defaultValue={this.state.url} />
+        <button type='submit'>{this.props.buttonText}</button>
+        </form>
 
-  const [image, setImage ] = useState(null);
-  const [url,setUrl]= useState("");
-  const [progress,setProgress]=useState(0);
+      </React.Fragment>
+    );
+  }
 
-  const handleChange = e => {
-    if(e.target.files.[0]){
-      setImage(e.target.files.[0])
-    }
-  };
-  const handleUpload = (e) => {
-    const uploadTask =storage.ref(`images/${image.name}`).put(image);
-    uploadTask.on(
-      "state_changed",
-      snapshot=>{
-        const progress = Math.round(
-          (snapshot.bytesTransferred/snapshot.totalBytes)*100
-        );
-        setProgress(progress);
-      },
-      error => {
-        console.log(error);
-      },
-      () =>{
-        storage
-          .ref("images")
-          .child(image.name)
-          .getDownloadURL()
-          .then(url =>{
-            console.log(url);
-            setUrl(url);
-          });
-      }
-    )
-  };
-
-
-
+else{
   return (
-   
     <React.Fragment>
-       <div>
-        <progress value={progress} max="100"/>
-          <br/>
-
-          <input type="file" onChange={handleChange}/>
-          <button onClick={handleUpload}>Upload</button>
-          <br />
-          {url}
-          <br/>
-      </div>
-      <form onSubmit={props.formSubmissionHandler}>
-
+      <FileUploadForm/>
+      <form onSubmit={this.props.formSubmissionHandler}>
         <input
           type='text'
           name='name'
-          placeholder='Name'
-          defaultValue={props.name}
-        />
+          placeholder='Name of Recipe'
+          defaultValue={this.props.name} />
+        <div id="dynamicInput">
+          {this.props.ingredients.map(x =>
+            <input
+              className='ingredients'
+              type='text'
+              name={'ingredients'+x}
+              defaultValue={x}
+              placeholder='' />
+          )}
+          <button onClick={() => this.appendIngredient()} type='button'>
+            CLICK ME TO ADD INGREDIENTS
+          </button>
+        </div>
+        <div id="dynamicInput2">
+          {this.props.steps.map(x =>
+            <input
+              className='steps'
+              type='text'
+              name={'steps'+x}
+              defaultValue={x}
+              placeholder='' />
+
+          )}
+          <button onClick={() => this.appendSteps()} type='button'>
+            CLICK ME TO ADD STEPS
+           </button>
+        </div>
         <textarea
-          name='ingredients'
-          placeholder='ingredients'
-          defaultValue={props.ingredients} />
-        <textarea
-          name='steps'
-          placeholder='steps'
-          defaultValue={props.steps} />
-        <textarea
+          type='text'
           name='description'
           placeholder='description'
-          defaultValue={props.description} />
-        <select id="type" name="type">
-          <option value="breakfast">breakfast</option>
-          <option value="lunch">lunch</option>
-          <option value="dinner">dinner</option>
-        </select> 
-        <input
-          type='text'
-          name='Url'
-          placeholder='Url'
-          defaultValue={url}
-        />
-        <button type='submit'>{props.buttonText}</button>
+          defaultValue={this.props.description} />
+           <input
+            type='text'
+            name='url'
+            placeholder='url'
+            defaultValue={this.state.url} />
+      <button type='submit'>{this.props.buttonText}</button>
       </form>
+
     </React.Fragment>
   );
+}
+}
+
+  appendIngredient() {
+    var newInput = this.state.ingredients.length;
+    this.setState(prevState => ({ ingredients: prevState.ingredients.concat([newInput]) }));
+    console.log('hhhhhhhhhhhhhhhh', this.state)
+  }
+  appendSteps() {
+    var newInput = this.state.steps.length;
+    this.setState(prevState => ({ steps: prevState.steps.concat([newInput]) }));
+    console.log('hhhhhhhhhhhhhhhh', this.state)
+  }
+
 }
 
 ReusableForm.propTypes = {
