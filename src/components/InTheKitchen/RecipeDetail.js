@@ -12,7 +12,10 @@ function RecipeDetail(props){
         <div className="container">
           <div id="recipeDetails">
           <h1>{recipe.name} Details</h1>
-          <img src ={recipe.Url}/>
+          <div id ='photo'>
+          <img src ={recipe.Url} ></img>
+          
+            </div>
           <h2>type of recipe: {recipe.type}</h2>
           <p>description: {recipe.description}</p>
           <h2>ingredients: {recipe.ingredients}</h2>
