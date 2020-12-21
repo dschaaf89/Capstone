@@ -3,13 +3,14 @@ import PropTypes from "prop-types";
 import React, { useState } from 'react';
 
 import { storage } from '../../firebase';
-function ReusableForm(props) {
-  console.log('reusable', props);  
+function ReusableForm(props) {  
+ 
   
-
   const [image, setImage ] = useState(null);
   const [url,setUrl]= useState("");
   const [progress,setProgress]=useState(0);
+  const [ingredients,setIngredients]=useState(['0'])
+  const [steps,setSteps]=useState(['0'])
 
   const handleChange = e => {
     if(e.target.files.[0]){
@@ -65,14 +66,33 @@ function ReusableForm(props) {
           placeholder='Name'
           defaultValue={props.name}
         />
-        <textarea
-          name='ingredients'
-          placeholder='ingredients'
-          defaultValue={props.ingredients} />
-        <textarea
-          name='steps'
-          placeholder='steps'
-          defaultValue={props.steps} />
+         <div id="dynamicInput">
+          {this.props.materials.map(x =>
+            <input
+              className='materials'
+              type='text'
+              name={'materials'+x}
+              defaultValue={x}
+              placeholder='' />
+          )}
+          <button onClick={() => this.appendIngredient()} type='button'>
+            CLICK ME TO ADD MATERIALS
+          </button>
+        </div>
+        <div id="dynamicInput2">
+          {this.props.steps.map(x =>
+            <input
+              className='steps'
+              type='text'
+              name={'steps'+x}
+              defaultValue={x}
+              placeholder='' />
+
+          )}
+          <button onClick={() => this.appendSteps()} type='button'>
+            CLICK ME TO ADD STEPS
+           </button>
+        </div>
         <textarea
           name='description'
           placeholder='description'

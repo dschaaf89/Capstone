@@ -7,8 +7,6 @@ class ReusableCraftForm extends React.Component {
     this.state = {
       ingredients: ['0'],
       steps:['0']
-
-
     };
   }
   render() {
