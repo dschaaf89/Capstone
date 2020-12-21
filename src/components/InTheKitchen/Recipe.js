@@ -8,7 +8,7 @@ function Recipe(props) {
     <React.Fragment>
      
       <div onClick={() => props.whenRecipeClicked(props.id)}>
-        {/* <img src={props.Url} alt="img of food"/> */}
+        <img src={props.url} alt="img of food"/>
         <h1>{props.name}</h1>
         <h3>{props.ingredients}</h3>
         <h3>{props.steps}</h3>

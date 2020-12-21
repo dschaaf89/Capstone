@@ -80,3 +80,10 @@ border-radius: 5%;
   font-family: 'Great Vibes', cursive;
   margin-top:8px;
 }
+.fileUpload{
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+background-color: rgba(128, 128, 128, 0.322);
+}

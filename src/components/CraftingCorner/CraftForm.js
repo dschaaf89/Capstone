@@ -13,14 +13,16 @@ function CraftForm(props){
    
     console.log(event.target.getElementsByClassName("materials"))
     const materials =[];
-    const steps = [];
-    const test2 = event.target.getElementsByClassName("steps")
-    const test = event.target.getElementsByClassName("materials")
-    console.log(test.length)
-    for(let i = 0 ; i < test.length ; i++ )
+    const step = [];
+    const stepList = event.target.getElementsByClassName("steps")
+    const materialsList = event.target.getElementsByClassName("materials")
+    console.log(materialsList.length)
+    for(let i = 0 ; i < materialsList.length ; i++ )
     {
-      materials.push(test[i].value);
-      steps.push(test2[i].value);
+      console.log(materialsList[i].value);
+      materials.push(materialsList[i].value);
+      console.log(materialsList[i].value);
+      step.push(stepList[i].value);
     }
     
      console.log(materials); 
@@ -31,7 +33,7 @@ function CraftForm(props){
       {
         name:event.target.name.value,
         materials: materials,
-        steps:steps,
+        steps:step,
         description:event.target.description.value,
         url:event.target.url.value
 

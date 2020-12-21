@@ -43,7 +43,7 @@ const ReactFirebaseFileUpload = (props) => {
   };
   console.log('image',image);
 return (
-  <div>
+  <div className='fileUpload'>
    <progress value={progress} max="100"/>
     <br/>
 

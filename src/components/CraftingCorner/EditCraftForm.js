@@ -29,6 +29,7 @@ function EditCraftForm (props) {
         materials={props.craft.materials}
         steps={props.craft.steps}
         description={props.craft.description}
+        url={props.craft.url}
         formSubmissionHandler={handleEditCraftFormSubmission}
         buttonText="Update Craft" />
     </React.Fragment>

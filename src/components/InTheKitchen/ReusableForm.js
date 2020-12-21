@@ -31,11 +31,15 @@ class ReusableForm extends React.Component {
         <FileUploadForm
         test={ this.test}/>
         <form onSubmit={this.props.formSubmissionHandler}>
+        <div className="row">
+        <div className="col">
           <input
             type='text'
             name='name'
             placeholder='Name of Recipe'
             defaultValue={this.props.name} />
+            </div>
+            <div className="col">
           <div id="dynamicInput">
             {this.state.ingredients.map(x =>
               <input
@@ -49,6 +53,8 @@ class ReusableForm extends React.Component {
               CLICK ME TO ADD ingredients
             </button>
           </div>
+          </div>
+          <div className="col">
           <div id="dynamicInput2">
             {this.state.steps.map(x =>
               <input
@@ -63,17 +69,23 @@ class ReusableForm extends React.Component {
               CLICK ME TO ADD STEPS
              </button>
           </div>
+          </div>
+          <div className="col">
           <textarea
             type='text'
             name='description'
             placeholder='description'
             defaultValue={this.props.description} />
+            </div>
+            <div className="col">
             <input
             type='text'
             name='url'
             placeholder='url'
             defaultValue={this.state.url} />
+            </div>
         <button type='submit'>{this.props.buttonText}</button>
+        </div>
         </form>
 
       </React.Fragment>
@@ -85,11 +97,15 @@ else{
     <React.Fragment>
       <FileUploadForm/>
       <form onSubmit={this.props.formSubmissionHandler}>
+      <div className="row">
+        <div className="col">
         <input
           type='text'
           name='name'
           placeholder='Name of Recipe'
           defaultValue={this.props.name} />
+          </div>
+          <div className="col">
         <div id="dynamicInput">
           {this.props.ingredients.map(x =>
             <input
@@ -103,6 +119,8 @@ else{
             CLICK ME TO ADD INGREDIENTS
           </button>
         </div>
+        </div>
+        <div className="col">
         <div id="dynamicInput2">
           {this.props.steps.map(x =>
             <input
@@ -117,17 +135,23 @@ else{
             CLICK ME TO ADD STEPS
            </button>
         </div>
+        </div>
+        <div className="col">
         <textarea
           type='text'
           name='description'
           placeholder='description'
           defaultValue={this.props.description} />
+          <div className="col"></div>
            <input
             type='text'
             name='url'
             placeholder='url'
             defaultValue={this.state.url} />
+            </div>
       <button type='submit'>{this.props.buttonText}</button>
+  
+      </div>
       </form>
 
     </React.Fragment>

@@ -16,7 +16,8 @@ function EditRecipeForm (props) {
       ingredients: event.target.ingredients.value,
       steps: event.target.steps.value,
       description:event.target.description.value,
-      type:event.target.type.value
+      foodType:event.target.foodType.value,
+      url:event.target.url.value
     }
     return firestore.update({collection: 'recipes', doc: recipe.id }, propertiesToUpdate)
   }
@@ -28,7 +29,8 @@ function EditRecipeForm (props) {
         ingredients={props.recipe.ingredients}
         steps={props.recipe.steps}
         description={props.recipe.description}
-        type={props.recipe.type}
+        foodType={props.recipe.foodType}
+        url={props.recipe.url}
         formSubmissionHandler={handleEditRecipeFormSubmission}
         buttonText="Update Recipe" />
     </React.Fragment>
