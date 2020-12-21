@@ -56,6 +56,11 @@ class ReusableCraftForm extends React.Component {
             name='description'
             placeholder='description'
             defaultValue={this.props.description} />
+            <input
+            type='text'
+            name='url'
+            placeholder='url'
+            defaultValue='url' />
         <button type='submit'>{this.props.buttonText}</button>
         </form>
 
@@ -105,6 +110,11 @@ else{
           name='description'
           placeholder='description'
           defaultValue={this.props.description} />
+           <input
+            type='text'
+            name='url'
+            placeholder='url'
+            defaultValue='url' />
       <button type='submit'>{this.props.buttonText}</button>
       </form>
 

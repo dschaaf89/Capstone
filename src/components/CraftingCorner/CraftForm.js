@@ -32,7 +32,8 @@ function CraftForm(props){
         name:event.target.name.value,
         materials: materials,
         steps:steps,
-        description:event.target.description.value
+        description:event.target.description.value,
+        url:event.target.url.value
 
       }
         

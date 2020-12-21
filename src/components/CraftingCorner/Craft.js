@@ -23,8 +23,8 @@ Recipe.PropType = {
   whenCraftClicked:PropTypes.func,
   name: PropTypes.string,
   materials:PropTypes.array,
-   steps: PropTypes.array,
-  type:propTypes.string
+  steps: PropTypes.array,
+  url:PropTypes.string
 
 
 }

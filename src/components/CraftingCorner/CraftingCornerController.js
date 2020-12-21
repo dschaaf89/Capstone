@@ -46,7 +46,7 @@ class CraftingCornerController extends React.Component {
         materials: craft.get('materials'),
         steps: craft.get('steps'),
         description: craft.get('description'),
-        type:craft.get('type'),
+        url:craft.get('url'),
         id: craft.id
       }
       this.setState({selectedCraft:firestoreCraft});
