@@ -17,11 +17,12 @@ function CraftForm(props){
     const stepList = event.target.getElementsByClassName("steps")
     const materialsList = event.target.getElementsByClassName("materials")
     console.log(materialsList.length)
+    console.log(stepList.length)
     for(let i = 0 ; i < materialsList.length ; i++ )
     {
       console.log(materialsList[i].value);
       materials.push(materialsList[i].value);
-      console.log(materialsList[i].value);
+      console.log(stepList[i].value);
       step.push(stepList[i].value);
     }
     

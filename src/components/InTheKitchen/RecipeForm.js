@@ -15,13 +15,19 @@ function RecipeForm(props){
     console.log(event.target.getElementsByClassName("ingredients"))
     const ingredients =[];
     const steps = [];
-    const test2 = event.target.getElementsByClassName("steps")
-    const test = event.target.getElementsByClassName("ingredients")
-    console.log(test.length)
-    for(let i = 0 ; i < test.length ; i++ )
+    const stepList = event.target.getElementsByClassName("steps")
+    const ingredientList = event.target.getElementsByClassName("ingredients")
+    console.log("ingredients",ingredientList.length)
+    console.log("steps",stepList.length)
+    for(let i = 0 ; i < ingredientList.length ; i++ )
     {
-      ingredients.push(test[i].value);
-      steps.push(test2[i].value);
+      console.log("ingredients list",ingredientList[i].value)
+      ingredients.push(ingredientList[i].value);
+    }
+    for(let i=0; i < stepList.length;i++){
+      console.log("step list",stepList[i].value)
+      steps.push(stepList[i].value);
+
     }
     
      console.log(ingredients); 

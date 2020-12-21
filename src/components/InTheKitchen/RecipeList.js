@@ -24,7 +24,9 @@ function RecipeList(props) {
                 return(
                 
                 <Recipe
+                  
                   whenRecipeClicked={props.onRecipeSelection}
+                  url = {recipe.url}
                   name={recipe.name}
                   // ingredients= {recipe.ingredients}
                   // steps={recipe.steps}
