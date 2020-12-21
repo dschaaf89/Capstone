@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import { propTypes } from "react-bootstrap/esm/Image";
 
 function Recipe(props) {
-  console.log(props)
+ 
   return (
     <React.Fragment>
      
       <div onClick={() => props.whenRecipeClicked(props.id)}>
-        <img src={props.url} alt="img of food" width='100px' float='left' />
+        <div className="photo">
+        <img src={props.url} alt="img of food" width="150px" margin="0"/>
+        </div>
         <h1>{props.name}</h1>
         <h3>{props.ingredients}</h3>
         <h3>{props.steps}</h3>

@@ -12,18 +12,15 @@ class ReusableForm extends React.Component {
     };
   }
   test = (e) => {
-    console.log(this.state)
+   
     this.setState({
       ingredients: this.state.ingredients,
       steps: this.state.steps,
       url:e
     })
-    console.log(this.state)
+    
   }
   render() {
-    console.log(this.props)
-    console.log(this.state)
-    //console.log('this.props.ingredients',this.props.ingredients)
     if(this.props.ingredients.length === 0)
     {
     return (
@@ -162,12 +159,11 @@ else{
   appendIngredient() {
     var newInput = this.state.ingredients.length;
     this.setState(prevState => ({ ingredients: prevState.ingredients.concat([newInput]) }));
-    console.log('hhhhhhhhhhhhhhhh', this.state)
+ 
   }
   appendSteps() {
     var newInput = this.state.steps.length;
     this.setState(prevState => ({ steps: prevState.steps.concat([newInput]) }));
-    console.log('hhhhhhhhhhhhhhhh', this.state)
   }
 
 }

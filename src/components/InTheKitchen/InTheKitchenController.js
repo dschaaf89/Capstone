@@ -73,8 +73,7 @@ class InTheKitchenController extends React.Component {
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.editing ) {  
-          
+    if (this.state.editing ) {      
       currentlyVisibleState = <EditRecipeForm recipe = {this.state.selectedRecipe} onEditRecipe = {this.handleEditingRecipeInList} />
       buttonText = "Return to Recipe List";
     } else if (this.state.selectedRecipe != null) {
@@ -89,7 +88,6 @@ class InTheKitchenController extends React.Component {
       buttonText = "Return to Recipe List";
     } else {
       currentlyVisibleState = <RecipeList  onRecipeSelection={this.handleChangingSelectedRecipe} />;
-      console.log(currentlyVisibleState);
       buttonText = "Add Recipe";
     }
     return (

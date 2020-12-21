@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function RecipeDetail(props){
-
-  console.log(props);
   const { recipe, onClickingDelete } = props;
   
   return (
