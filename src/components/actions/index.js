@@ -11,13 +11,16 @@ export const toggleForm = () => ({
 });
 
 export const addRecipe = (recipe) => {
-  const { names, ingredients, steps, description, id } = recipe;
+  const { names, ingredients, steps, description, id, url } = recipe;
+  console.log("action")
+  console.log(url)
   return {
     type: c.ADD_RECIPE,
     names: names,
     ingredients: ingredients,
     steps: steps,
     description:description,
+    Url:url,
     id: id
   }
 }

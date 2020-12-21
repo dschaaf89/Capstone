@@ -10,6 +10,8 @@ export default (state = {}, action) => {
         ingredients:ingredients,
         steps:steps,
         description:description,
+        type:type,
+        Url:Url,
         id:id
       }
     });
