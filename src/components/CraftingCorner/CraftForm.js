@@ -41,11 +41,13 @@ function CraftForm(props){
 
   return (
     <React.Fragment>
+      <div className="card1">
       <ReusableCraftForm 
         materials= {[]}
         steps= {[]}
         formSubmissionHandler={addCraftToFireStore}
         buttonText="Submit" />
+        </div>
     </React.Fragment>
   )
 }

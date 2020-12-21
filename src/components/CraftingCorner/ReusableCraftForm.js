@@ -5,7 +5,8 @@ class ReusableCraftForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputs: ['0']
+      ingredients: ['0'],
+      steps:['0']
 
 
     };
@@ -26,7 +27,7 @@ class ReusableCraftForm extends React.Component {
             placeholder='Name of Craft'
             defaultValue={this.props.name} />
           <div id="dynamicInput">
-            {this.state.inputs.map(x =>
+            {this.state.ingredients.map(x =>
               <input
                 className='materials'
                 type='text'
@@ -34,12 +35,12 @@ class ReusableCraftForm extends React.Component {
                 defaultValue={x}
                 placeholder='' />
             )}
-            <button onClick={() => this.appendInput()} type='button'>
+            <button onClick={() => this.appendIngredient()} type='button'>
               CLICK ME TO ADD MATERIALS
             </button>
           </div>
           <div id="dynamicInput2">
-            {this.state.inputs.map(x =>
+            {this.state.steps.map(x =>
               <input
                 className='steps'
                 type='text'
@@ -48,7 +49,7 @@ class ReusableCraftForm extends React.Component {
                 placeholder='' />
 
             )}
-            <button onClick={() => this.appendInput()} type='button'>
+            <button onClick={() => this.appendSteps()} type='button'>
               CLICK ME TO ADD STEPS
              </button>
           </div>
@@ -83,7 +84,7 @@ else{
               defaultValue={x}
               placeholder='' />
           )}
-          <button onClick={() => this.appendInput()} type='button'>
+          <button onClick={() => this.appendIngredient()} type='button'>
             CLICK ME TO ADD MATERIALS
           </button>
         </div>
@@ -97,7 +98,7 @@ else{
               placeholder='' />
 
           )}
-          <button onClick={() => this.appendInput()} type='button'>
+          <button onClick={() => this.appendSteps()} type='button'>
             CLICK ME TO ADD STEPS
            </button>
         </div>
@@ -114,9 +115,14 @@ else{
 }
 }
 
-  appendInput() {
-    var newInput = this.state.inputs.length;
-    this.setState(prevState => ({ inputs: prevState.inputs.concat([newInput]) }));
+  appendIngredient() {
+    var newInput = this.state.ingredients.length;
+    this.setState(prevState => ({ ingredients: prevState.ingredients.concat([newInput]) }));
+    console.log('hhhhhhhhhhhhhhhh', this.state)
+  }
+  appendSteps() {
+    var newInput = this.state.steps.length;
+    this.setState(prevState => ({ steps: prevState.steps.concat([newInput]) }));
     console.log('hhhhhhhhhhhhhhhh', this.state)
   }
 
