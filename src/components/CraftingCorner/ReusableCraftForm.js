@@ -6,8 +6,19 @@ class ReusableCraftForm extends React.Component {
     super(props);
     this.state = {
       ingredients: ['0'],
-      steps:['0']
+      steps:['0'],
+      url:''
+      
     };
+  }
+  test = (e) => {
+    console.log(this.state)
+    this.setState({
+      ingredients: this.state.ingredients,
+      steps: this.state.steps,
+      url:e
+    })
+    console.log(this.state)
   }
   render() {
     console.log(this.props)
@@ -17,7 +28,8 @@ class ReusableCraftForm extends React.Component {
     {
     return (
       <React.Fragment>
-        <FileUploadForm/>
+        <FileUploadForm
+        test={ this.test}/>
         <form onSubmit={this.props.formSubmissionHandler}>
           <input
             type='text'
@@ -60,7 +72,7 @@ class ReusableCraftForm extends React.Component {
             type='text'
             name='url'
             placeholder='url'
-            defaultValue='url' />
+            defaultValue={this.state.url} />
         <button type='submit'>{this.props.buttonText}</button>
         </form>
 
@@ -114,7 +126,7 @@ else{
             type='text'
             name='url'
             placeholder='url'
-            defaultValue='url' />
+            defaultValue={this.state.url} />
       <button type='submit'>{this.props.buttonText}</button>
       </form>
 

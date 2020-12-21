@@ -2,5 +2,11 @@
   "cSpell.words": [
     "Firestore",
     "Signin"
-  ]
+  ],
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "off",
+  "typescript.tsc.autoDetect": "off",
+  "npm.autoDetect": "off",
+  "debug.allowBreakpointsEverywhere": true,
+  "html.autoClosingTags": false
 }

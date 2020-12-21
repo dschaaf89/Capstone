@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { storage } from '../firebase';
 
-const ReactFirebaseFileUpload = () => {
+const ReactFirebaseFileUpload = (props) => {
   const [image, setImage ] = useState(null);
   const [url,setUrl]= useState("");
   const [progress,setProgress]=useState(0);
@@ -31,10 +31,15 @@ const ReactFirebaseFileUpload = () => {
           .getDownloadURL()
           .then(url =>{
             console.log(url);
+            
             setUrl(url);
+            props.test(url)
           });
       }
     )
+    console.log(props)
+  
+    
   };
   console.log('image',image);
 return (
