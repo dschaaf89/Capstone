@@ -11,9 +11,9 @@ function BioForm(props){
     { collection: 'aboutMe' }
   ]); 
    const b = useSelector(state => state.firestore.ordered.aboutMe);
-  console.log(b)
+
   function handleEditAboutMeFormSubmission(event){
-    console.log(event)
+    
     
     event.preventDefault();
     props.onEditAbout();
