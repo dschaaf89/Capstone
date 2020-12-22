@@ -70,6 +70,18 @@ class CraftingCornerController extends React.Component {
   }
 
   render(){
+    const auth = this.props.firebase.auth();
+    console.log(auth);
+
+    if (!isLoaded(auth)) {
+      return (
+        <React.Fragment>
+          <h1>Loading...</h1>
+        </React.Fragment>
+      )
+    }
+
+
     let currentlyVisibleState = null;
     let buttonText = null;
     if (this.state.editing ) {  
@@ -91,12 +103,34 @@ class CraftingCornerController extends React.Component {
       console.log(currentlyVisibleState);
       buttonText = "Add Craft";
     }
-    return (
-      <React.Fragment>
-        {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
-      </React.Fragment>
-    );
+    if ((isLoaded(auth)) && (auth.currentUser === null)) {
+      console.log(auth);
+      return (
+        <React.Fragment>
+          {currentlyVisibleState}
+        </React.Fragment>
+      )
+    }
+    else {
+      return (
+        <React.Fragment>
+          {currentlyVisibleState}
+          <button onClick={this.handleClick}>{buttonText}</button>
+        </React.Fragment>
+      )
+    }
+
+
+
+
+    // return (
+    //   <React.Fragment>
+    //     {currentlyVisibleState}
+    //     <button onClick={this.handleClick}>{buttonText}</button>
+    //   </React.Fragment>
+    // );
+      
+
   }
 }
 
