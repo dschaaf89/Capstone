@@ -13,11 +13,11 @@ class AboutMeController extends React.Component {
     }
   }
 
-  handleAboutMeClick = () => {
+  handleBioClick = () => {
    console.log('hererere')
-    if (this.state.selectedAboutMe != null) {
+    if (this.state.selectedBio != null) {
       this.setState({
-        selectedAboutMe: null,
+        selectedBio: null,
         editing: false
       });
     } else {
@@ -30,12 +30,12 @@ class AboutMeController extends React.Component {
 
   handleChangingSelectedBio = (id) => {
     console.log('here now')
-    this.props.firestore.get({collection:'about', doc : id}).then((aboutMe)=>{
+    this.props.firestore.get({collection:'aboutMe', doc : id}).then((x)=>{
       const firestoreAboutMe = {
-        name: aboutMe.get('name'),
-        about: aboutMe.get('about'),
-        url:aboutMe.get('url'),
-        id: aboutMe.id
+        name: x.get('name'),
+        url: x.get('url'),
+        about: x.get('about'),
+        id: x.id
       }
       this.setState({selectedAboutMe:firestoreAboutMe});
     });
@@ -47,7 +47,7 @@ class AboutMeController extends React.Component {
   handleEditAboutMeClick = () => {
     this.setState({editing: true});
   }
-  handleEditingBioInList = () => {
+  handleEditingAboutMeInList = () => {
     //const { dispatch } = this.props;
     // const action = a.addBio(bioToEdit);
     // dispatch(action);
@@ -73,7 +73,7 @@ class AboutMeController extends React.Component {
       if (this.state.editing ) {  
         
         
-        currentlyVisibleState = <AboutMeForm  onEditAboutMe = {this.handleEditingBioInList} />
+        currentlyVisibleState = <AboutMeForm  onEditAboutMe = {this.handleEditingAboutMeInList} />
         buttonText = "Return to AboutMe";
       } else {
         currentlyVisibleState = <AboutMe  />;
@@ -105,7 +105,7 @@ AboutMeController.propTypes ={
 }
 const mapStateToProps = state => {
   return{
-  FormVisibleOnPage:state.aboutMeFormVisibleOnPage
+  bioFormVisibleOnPage:state.bioFormVisibleOnPage
 }
 }
 AboutMeController = connect(mapStateToProps)(AboutMeController)

@@ -1,61 +1,72 @@
-import React, {useState} from 'react';
-import "./ContactForm.css"
-import { useFirestore } from 'react-redux-firebase'
+import React from "react";
+import PropTypes from "prop-types";
+import { useFirestore } from 'react-redux-firebase';
+import { useSelector } from 'react-redux';
+import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
 
-
-
-const AboutMeForm = () => {
+function BioForm(props){
   const firestore = useFirestore();
-  const [name,setName]=useState('');
-  const [url,setUrl]=useState('')
-  const [about,setAbout]=useState('');
-  const handleSubmit =(e)=>{
-    e.preventDefault();
-    firestore.collection('about').add({
-      name:name,
-      url:url,
-      about:about
-    })
-
-      setUrl('');
-      setName('');
-      setAbout('');
-      
-  };
-  return(
-    <div className="card3">
-      
-    <form className='form' onSubmit={handleSubmit}>
-    <div className="row">
-        <div className="col">
-      <h1>aboutMe</h1>
-      <div className="col">
-      <label>Name</label>
-      <input placeholder="Name" value = {name}
-      onChange={(e)=> setName(e.target.value)}
-      />
-      </div>
-      <div className="col">
-      <label>Photo</label>
-      <input placeholder="url" value = {url}
-      onChange={(e)=> setUrl(e.target.value)}
-      />
-      </div>
-      <div className="col">
-      <label>About</label>
-      <textarea placeholder="About"
-      value = {about}
-      onChange={(e)=> setAbout(e.target.value)}/>
-      </div>
-      
-    <button type='submit'>submit</button>
-    </div>
-    </div>
-    </form>
-    </div>
-  )
+  const {bio} = props;
+  useFirestoreConnect([
+    { collection: 'bio' }
+  ]); 
+   const b = useSelector(state => state.firestore.ordered.bio);
+  console.log(b)
+  function handleEditBioFormSubmission(event){
+    console.log(event)
+    
+    event.preventDefault();
+    props.onEditBio();
+    const propsToUpdate =
+      {
+        name:event.target.name.value,
+        github:event.target.github.value,
+        linkedin:event.target.linkedin.value,
+        email:event.target.email.value,
+        about:event.target.about.value
+      };
+      console.log(b.id)
+    return firestore.update({collection: 'bio', doc:event.target.id.value}, propsToUpdate) 
+  }
   
+  
+  return (
+    <React.Fragment>
+      <form onSubmit = {handleEditBioFormSubmission}>
+        <input
+          type='text'
+          name='name'
+          defaultValue= {b[0].name} />
+        <input
+          type='text'
+          name='github'
+          defaultValue= {b[0].github} />
+
+        <input
+          name='linkedin'
+          defaultValue= {b[0].linkedin} />
+
+          <input
+          type='text'
+          name='email'
+          defaultValue= {b[0].email} />
+          <input
+          type='text'
+          hidden
+          name='id'
+          defaultValue= {b[0].id} />
+
+          <textarea
+          type='text'
+          name='about'
+          defaultValue= {b[0].about} />
+
+        <button type='submit'>Submit</button>
+      </form>
+    </React.Fragment>
+  )
 }
-
-
-export default AboutMeForm;
+BioForm.propTypes = {
+  onBioCreation: PropTypes.func
+}
+export default BioForm;
