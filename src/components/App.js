@@ -14,6 +14,7 @@ import ContactForm from './ContactUs/ContactForm';
  //import ContactMe from '../pages/ContactMe';
  //import CraftStore from '../pages/CraftStore';
   import AboutMe from './AboutMe/AboutMe';
+  import Signin from './../Signin';
 
 
 
@@ -30,6 +31,7 @@ return(
       <Route path='/inthekitchen' component={InTheKitchenController}/>
       <Route path='/craftingcorner' component={CraftingCornerController}/>
       <Route path='/contactme' component={ContactForm}/>
+      <Route path='/signin' component={Signin}/>
       {/* <Route path='/mygypsyheart' component={MyGypsyHeart}/> */}
       <Route path='/aboutme' component={AboutMe}/>
       {/* <Route path='/contactme' component={ContactMe}/> */}

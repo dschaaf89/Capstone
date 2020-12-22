@@ -31,8 +31,8 @@ export const MenuItems = [
     },
     {
         title:"Sign In",
-        link:'#',
-        cName:'nav-links-mobile'
+        link:'/signin',
+        cName:'nav-links'
     },
     
 ]
