@@ -10,10 +10,10 @@ import Registration from '../pages/Registration';
  import InTheKitchenController from './InTheKitchen/InTheKitchenController';
  import CraftingCornerController from './CraftingCorner/CraftingCornerController';
 import ContactForm from './ContactUs/ContactForm';
-//  import MyGypsyHeart from '../pages/MyGypsyHeart';
-//  import ContactMe from '../pages/ContactMe';
-//  import CraftStore from '../pages/CraftStore';
-//  import AboutMe from './AboutMe/AboutMe';
+ //import MyGypsyHeart from '../pages/MyGypsyHeart';
+ //import ContactMe from '../pages/ContactMe';
+ //import CraftStore from '../pages/CraftStore';
+  import AboutMe from './AboutMe/AboutMe';
 
 
 
@@ -30,10 +30,10 @@ return(
       <Route path='/inthekitchen' component={InTheKitchenController}/>
       <Route path='/craftingcorner' component={CraftingCornerController}/>
       <Route path='/contactme' component={ContactForm}/>
-      {/* <Route path='/mygypsyheart' component={MyGypsyHeart}/>
+      {/* <Route path='/mygypsyheart' component={MyGypsyHeart}/> */}
       <Route path='/aboutme' component={AboutMe}/>
-      <Route path='/contactme' component={ContactMe}/>
-      <Route path='/craftstore' component={CraftStore}/> */}
+      {/* <Route path='/contactme' component={ContactMe}/> */}
+      {/* <Route path='/craftstore' component={CraftStore}/> */}
     </Switch>
     </div>
     <div id="footer">
