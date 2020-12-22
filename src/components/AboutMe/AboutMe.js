@@ -4,43 +4,38 @@ import { useSelector } from 'react-redux';
 import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
 function AboutMe(props){
 
-  return (
-    <div>
-      hi
-    </div>
-  )
-  // useFirestoreConnect([
-  //   { collection: 'aboutMe' }
-  // ]); 
-  //  const b = useSelector(state => state.firestore.ordered.aboutMe);
+ 
+  useFirestoreConnect([
+    { collection: 'aboutMe' }
+  ]); 
+   const b = useSelector(state => state.firestore.ordered.aboutMe);
 
-  // console.log(b);
+  console.log(b);
 
-  // if (isLoaded(b)) {
-  //   return (
-  //     <React.Fragment>
-  //       <hr />
+  if (isLoaded(b)) {
+    return (
+      <React.Fragment>
+          <div className="card1">
+            <div id="aboutMe">
         
-  //         <h3>{b[0].name}</h3>
-  //         <h6>{b[0].url}</h6>
-  //         <hr />
-  //         <p>{b[0].about}</p>
-        
-  //     </React.Fragment>
-  //   );
-  // } else {
-  //   return (
-  //     <React.Fragment>
-  //       <h3>Loading...</h3>
-  //     </React.Fragment>
-  //   )
-  // }
+          <h1>{b[0].name}</h1>
+          <img src ={b[0].url} alt='picture of owner' width ="200 px"/>
+          
+          <h2>{b[0].about}</h2>
+          </div>
+          </div>
+      </React.Fragment>
+    );
+  } else {
+    return (
+      <React.Fragment>
+        <h3>Loading...</h3>
+      </React.Fragment>
+    )
+  }
  }
 AboutMe.propType = {
 name: PropTypes.string,
-github:PropTypes.string,
-linkedin:PropTypes.string,
-email: PropTypes.string,
 about:PropTypes.string
 }
 export default AboutMe;

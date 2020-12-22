@@ -13,7 +13,7 @@ class AboutMeController extends React.Component {
     }
   }
 
-  handleBioClick = () => {
+  handleAboutMeClick = () => {
    console.log('hererere')
     if (this.state.selectedBio != null) {
       this.setState({
@@ -28,12 +28,11 @@ class AboutMeController extends React.Component {
     }
   }
 
-  handleChangingSelectedBio = (id) => {
+  handleChangingSelectedAboutMe = (id) => {
     console.log('here now')
     this.props.firestore.get({collection:'aboutMe', doc : id}).then((x)=>{
       const firestoreAboutMe = {
         name: x.get('name'),
-        url: x.get('url'),
         about: x.get('about'),
         id: x.id
       }
@@ -105,7 +104,7 @@ AboutMeController.propTypes ={
 }
 const mapStateToProps = state => {
   return{
-  bioFormVisibleOnPage:state.bioFormVisibleOnPage
+  FormVisibleOnPage:state.FormVisibleOnPage
 }
 }
 AboutMeController = connect(mapStateToProps)(AboutMeController)

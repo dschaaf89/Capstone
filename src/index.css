@@ -43,12 +43,19 @@ border-radius: 5%;
   font-family: 'Caveat', cursive;
 
 }
+#aboutMe{
+ 
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: x-large;
+
+}
 
   
 .card1{
   background-image: url(https://media.macphun.com/img/uploads/customer/blog/1543597882/15435984725c017188f41eb1.29284408.jpg?q=85&w=1680);
-  width: 75%;
-height: 400px;
+  width: 90%;
+height:600px;
 margin-left: 5%;
 padding: 5%;
 overflow-y: scroll;
