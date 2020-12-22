@@ -17,9 +17,9 @@ const AboutMeForm = () => {
       about:about
     })
 
-      setEmail('');
+      setUrl('');
       setName('');
-      setMessage('');
+      setAbout('');
       
   };
   return(
