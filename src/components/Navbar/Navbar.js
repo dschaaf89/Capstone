@@ -1,6 +1,8 @@
 import React from 'react';
 import { MenuItems } from "./MenuItems";
 import './Navbar.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 class Navbar extends React.Component {
@@ -21,9 +23,11 @@ class Navbar extends React.Component {
                    {MenuItems.map((item,index) => {
                        return (
                           <li key = {index}>
-                                <a className = {item.cName} href= {item.link}>
+                              <Link to = {item.link}>
+                                <a className = {item.cName} href = {item.cName} >
                                    {item.title}
                                </a>
+                               </Link>
                            </li>
                        )
                    })}
