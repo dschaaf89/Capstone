@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withFirestore, isLoaded } from 'react-redux-firebase';
 
+
 function RecipeDetail(props){
   const { recipe, onClickingDelete } = props;
   console.log(props)
-  if((isLoaded(props.firebase.auth()) && (props.firebase.auth().currentUser == null))){
+  if((isLoaded(props.firebase.auth()) && (props.firebase.auth().currentUser === null))){
     return(
       <React.Fragment>
 <div className="card">
