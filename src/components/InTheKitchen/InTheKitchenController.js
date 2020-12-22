@@ -74,6 +74,7 @@ class InTheKitchenController extends React.Component {
 
     render() {
       const auth = this.props.firebase.auth();
+      console.log(auth);
       console.log(this.props)
       if (!isLoaded(auth)) {
         return (
@@ -83,7 +84,6 @@ class InTheKitchenController extends React.Component {
         )
       }
       console.log('test')
-      // if ((isLoaded(auth)) && (auth.currentUser != null)) {
       let currentlyVisibleState = null;
       let buttonText = null;
       if (this.state.editing) {
@@ -106,6 +106,7 @@ class InTheKitchenController extends React.Component {
       console.log(((isLoaded(auth)) && (auth.currentUser == null)))
 
       if ((isLoaded(auth)) && (auth.currentUser == null)) {
+        console.log(auth);
         return (
           <React.Fragment>
             {currentlyVisibleState}
@@ -116,7 +117,7 @@ class InTheKitchenController extends React.Component {
         return (
           <React.Fragment>
             {currentlyVisibleState}
-            <button onClick={this.handleRecipeClick}>{buttonText}</button>
+            <button onClick={this.handleClick}>{buttonText}</button>
           </React.Fragment>
         )
       }
@@ -130,40 +131,7 @@ class InTheKitchenController extends React.Component {
 
 
 
-  //       let currentlyVisibleState = null;
-  //       let buttonText = null;
-  //       if (this.state.editing ) {      
-  //         currentlyVisibleState = <EditRecipeForm recipe = {this.state.selectedRecipe} onEditRecipe = {this.handleEditingRecipeInList} />
-  //         buttonText = "Return to Recipe List";
-  //       } else if (this.state.selectedRecipe != null) {
-  //         currentlyVisibleState = 
-  //         <RecipeDetail 
-  //           recipe = {this.state.selectedRecipe} 
-  //           onClickingDelete = {this.handleDeletingRecipe} 
-  //           onClickingEdit = {this.handleEditClick} />
-  //         buttonText = "Return to Recipe List";
-  //       } else if (this.props.formVisibleOnPage) {
-  //         currentlyVisibleState = <RecipeForm onRecipeCreation={this.handleAddingNewRecipeToList}  />;
-  //         buttonText = "Return to Recipe List";
-  //       } else {
-  //         currentlyVisibleState = <RecipeList  onRecipeSelection={this.handleChangingSelectedRecipe} />;
-  //         buttonText = "Add Recipe";
-  //       }
-  //       if((isLoaded(auth))&&(auth.currentUser==null)){
-  //         return(
-  //           currentlyVisibleState
-  //         )
-  //       }else{
-  //       return (
-  //         <React.Fragment>
-  //           {currentlyVisibleState}
-  //           <button onClick={this.handleClick}>{buttonText}</button>
-  //         </React.Fragment>
-  //       );
-  //       }
 
-  //     }
-  // }
 
 
 
