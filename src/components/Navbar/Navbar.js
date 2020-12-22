@@ -1,7 +1,7 @@
 import React from 'react';
 import { MenuItems } from "./MenuItems";
 import './Navbar.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 
 

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Recipe from "./Recipe";
 import { useSelector } from 'react-redux'
-import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase'
+import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'
 import './RecipeList.css';
 
 function RecipeList(props) {

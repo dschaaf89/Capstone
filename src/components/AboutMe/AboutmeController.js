@@ -32,8 +32,8 @@ class AboutMeController extends React.Component {
     console.log('here now')
     this.props.firestore.get({collection:'about', doc : id}).then((aboutMe)=>{
       const firestoreAboutMe = {
-        company: aboutMe.get('name'),
-        description: aboutMe.get('about'),
+        name: aboutMe.get('name'),
+        about: aboutMe.get('about'),
         url:aboutMe.get('url'),
         id: aboutMe.id
       }
