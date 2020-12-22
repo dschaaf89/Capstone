@@ -109,7 +109,7 @@ else{
               className='ingredients'
               type='text'
               name={'ingredients'+x}
-              defaultValue={x}
+              defaultValue= {this.props.ingredients}
               placeholder='' />
           )}
           <button onClick={() => this.appendIngredient()} type='button'>
