@@ -39,7 +39,7 @@ class ReusableForm extends React.Component {
             <div className="col">
           <div id="dynamicInput">
             {this.state.ingredients.map(x =>
-              <input
+              <textarea
                 className='ingredients'
                 type='text'
                 name={'ingredients'+x}
@@ -54,7 +54,7 @@ class ReusableForm extends React.Component {
           <div className="col">
           <div id="dynamicInput2">
             {this.state.steps.map(x =>
-              <input
+              <textarea
                 className='steps'
                 type='text'
                 name={'steps'+x}

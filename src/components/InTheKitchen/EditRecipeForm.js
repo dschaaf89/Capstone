@@ -24,6 +24,7 @@ function EditRecipeForm (props) {
   console.log("here in the form",props)
   return (
     <React.Fragment>
+      <div className="card">
       <ReusableForm 
         name={props.recipe.name}
         ingredients={props.recipe.ingredients}
@@ -33,6 +34,7 @@ function EditRecipeForm (props) {
         url={props.recipe.url}
         formSubmissionHandler={handleEditRecipeFormSubmission}
         buttonText="Update Recipe" />
+        </div>
     </React.Fragment>
   );
 }

@@ -27,7 +27,7 @@ class ReusableForm extends React.Component {
         <input
           type='text'
           name='name'
-          placeholder='Name of Recipe'
+          placeholder='Name of Place'
           defaultValue={this.props.name} />
           </div>
         <div className="col">

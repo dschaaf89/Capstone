@@ -15,7 +15,9 @@ function TravelDetail(props) {
               <h1>{travel.name} Details</h1>
               <img src={travel.url} alt="" width="200px"></img>
               <div id="blog">
+                <div className="card5">
               <h3> {travel.blog}</h3>
+                  </div>
               </div>
             </div>
           </div>
@@ -32,7 +34,9 @@ function TravelDetail(props) {
             <h1>{travel.name}</h1>
             <img src={travel.url} alt =''width="500px"></img>
             <div id="blog">
-            <p>blog: {travel.blog}</p>
+            <div className="card5"> 
+            <p>{travel.blog}</p>
+            </div>
             </div>
           </div>
         </div>

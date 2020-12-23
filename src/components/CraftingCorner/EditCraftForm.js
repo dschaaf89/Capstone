@@ -24,6 +24,7 @@ function EditCraftForm (props) {
   console.log("here in the form",props)
   return (
     <React.Fragment>
+      <div className="card1">
       <ReusableCraftForm 
         name={props.craft.name}
         materials={props.craft.materials}
@@ -32,6 +33,7 @@ function EditCraftForm (props) {
         url={props.craft.url}
         formSubmissionHandler={handleEditCraftFormSubmission}
         buttonText="Update Craft" />
+        </div>
     </React.Fragment>
   );
 }

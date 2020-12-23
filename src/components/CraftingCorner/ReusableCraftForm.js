@@ -38,7 +38,7 @@ class ReusableCraftForm extends React.Component {
             defaultValue={this.props.name} />
           <div id="dynamicInput">
             {this.state.ingredients.map(x =>
-              <input
+              <textarea
                 className='materials'
                 type='text'
                 name={'materials'+x}
@@ -51,7 +51,7 @@ class ReusableCraftForm extends React.Component {
           </div>
           <div id="dynamicInput2">
             {this.state.steps.map(x =>
-              <input
+              <textarea
                 className='steps'
                 type='text'
                 name={'steps'+x}

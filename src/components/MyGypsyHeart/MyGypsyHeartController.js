@@ -63,7 +63,7 @@ class MyGypsyHeartController extends React.Component {
   }
 
   handleDeletingTravel = (id) => {
-    this.props.firestore.delete({ collection: 'recipes', doc: id });
+    this.props.firestore.delete({ collection: 'travel', doc: id });
     this.setState({ selectedTravel: null });
   }
 

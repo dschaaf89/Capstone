@@ -6,6 +6,7 @@ function Signin() {
     function doSignOut() {
       firebase.auth().signOut().then(function() {
         console.log("Successfully signed out!");
+        alert("you have signed out");
       }).catch(function(error) {
         console.log(error.message);
       });
@@ -41,7 +42,7 @@ function Signin() {
 
       <h1>Sign Out</h1>
       <button onClick={doSignOut}>Sign out</button>
-      alert("you have signed out");
+      
     </React.Fragment>
       
   );
