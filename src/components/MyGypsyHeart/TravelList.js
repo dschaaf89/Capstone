@@ -16,7 +16,7 @@ function TravelList(props) {
        
         <div id ="travelList">
          
-          <div className="card">
+          <div className="card3">
           <h1>Travel:</h1>
             <div className="container">
            

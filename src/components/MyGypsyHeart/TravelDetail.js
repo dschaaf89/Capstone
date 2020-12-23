@@ -9,12 +9,14 @@ function TravelDetail(props) {
   if ((isLoaded(props.firebase.auth())) && (props.firebase.auth().currentUser == null))  {
     return (
       <React.Fragment>
-        <div className="card">
+        <div className="card3">
           <div className="container">
-            <div id="recipeDetails">
+            <div id="travelDetails">
               <h1>{travel.name} Details</h1>
-              <img src={travel.url} alt=""></img>
-              <p>blog: {travel.blog}</p>
+              <img src={travel.url} alt="" width="200px"></img>
+              <div id="blog">
+              <h3> {travel.blog}</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -23,12 +25,14 @@ function TravelDetail(props) {
   }
   return (
     <React.Fragment>
-      <div className="card">
+      <div className="card3">
         <div className="container">
-          <div id="recipeDetails">
+          <div id="travelDetails">
             <h1>{travel.name}</h1>
             <img src={travel.url} alt =''width="500px"></img>
+            <div id="blog">
             <p>blog: {travel.blog}</p>
+            </div>
           </div>
         </div>
       </div>
