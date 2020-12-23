@@ -13,9 +13,9 @@ import ContactForm from './ContactUs/ContactForm';
  //import MyGypsyHeart from '../pages/MyGypsyHeart';
  //import ContactMe from '../pages/ContactMe';
  //import CraftStore from '../pages/CraftStore';
-  import AboutMe from './AboutMe/AboutMe';
   import Signin from './../Signin';
 import AboutmeController from './AboutMe/AboutmeController';
+import MyGypsyHeartController from './MyGypsyHeart/MyGypsyHeartController';
 
 
 
@@ -33,7 +33,7 @@ return(
       <Route path='/craftingcorner' component={CraftingCornerController}/>
       <Route path='/contactme' component={ContactForm}/>
       <Route path='/signin' component={Signin}/>
-      {/* <Route path='/mygypsyheart' component={MyGypsyHeart}/> */}
+      <Route path='/mygypsyheart' component={MyGypsyHeartController}/>
       <Route path='/aboutme' component={AboutmeController}/>
       {/* <Route path='/contactme' component={ContactMe}/> */}
       {/* <Route path='/craftstore' component={CraftStore}/> */}

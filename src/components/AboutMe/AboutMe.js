@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useSelector } from 'react-redux';
-import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
+import { useFirestoreConnect, isLoaded} from 'react-redux-firebase';
 function AboutMe(props){
 
  
@@ -19,7 +19,7 @@ function AboutMe(props){
             <div id="aboutMe">
         
           <h1>{b[0].name}</h1>
-          <img src ={b[0].url} alt='picture of owner' width ="200 px"/>
+          <img src ={b[0].url} alt='owner' width ="200 px"/>
           
           <h2>{b[0].about}</h2>
           </div>
