@@ -7,8 +7,8 @@ import './default.scss';
 import Header from "./Header";
 import Footer from './../components/Footer';
 import Registration from '../pages/Registration';
- import InTheKitchenController from './InTheKitchen/InTheKitchenController';
- import CraftingCornerController from './CraftingCorner/CraftingCornerController';
+import InTheKitchenController from './InTheKitchen/InTheKitchenController';
+import CraftingCornerController from './CraftingCorner/CraftingCornerController';
 import ContactForm from './ContactUs/ContactForm';
  //import MyGypsyHeart from '../pages/MyGypsyHeart';
  //import ContactMe from '../pages/ContactMe';
@@ -16,6 +16,7 @@ import ContactForm from './ContactUs/ContactForm';
   import Signin from './../Signin';
 import AboutmeController from './AboutMe/AboutmeController';
 import MyGypsyHeartController from './MyGypsyHeart/MyGypsyHeartController';
+import CraftStore from './CraftStore';
 
 
 
@@ -36,7 +37,7 @@ return(
       <Route path='/mygypsyheart' component={MyGypsyHeartController}/>
       <Route path='/aboutme' component={AboutmeController}/>
       {/* <Route path='/contactme' component={ContactMe}/> */}
-      {/* <Route path='/craftstore' component={CraftStore}/> */}
+      <Route path='/craftstore' component={CraftStore}/>
     </Switch>
     </div>
     <div id="footer">

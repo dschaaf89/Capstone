@@ -24,7 +24,7 @@ function TravelForm(props){
 
   return (
     <React.Fragment>
-      <div className="card">
+      <div className="card3">
       <ReusableForm 
         formSubmissionHandler={addTravelToFireStore}
         buttonText="Submit" />
