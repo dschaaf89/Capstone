@@ -6,7 +6,7 @@
     <!-- Project Avatar/Logo -->
     <br>
      <a href="https://github.com/dschaaf89/capstone">
-         ![picture](images/capstone.jpg)
+         <img src= "https://firebasestorage.googleapis.com/v0/b/capstone-ccbb4.appspot.com/o/images%2Fcapstone.jpg?alt=media&token=5063cb12-bbd4-4a88-87a7-5dd799d13ecd")
     </a>
     </a>
     <p align="center">
@@ -320,7 +320,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### ✉️ Contact and Support
 
-If you have any feedback or concerns, please contact me at daniel.schaaf@outlook.com
+If you have any feedback or concerns, please contact me at
 
 ------------------------------
 
