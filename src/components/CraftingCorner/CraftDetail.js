@@ -9,10 +9,13 @@ function CraftDetail(props) {
   if ((isLoaded(props.firebase.auth())) && (props.firebase.auth().currentUser == null))   {
     return (
       <React.Fragment>
+        <div id ="craftDetails">
         <div className="card1">
           <div className="container">
             <div id="craftDetails">
               <h1>{craft.name} Details</h1>
+              <h2>{craft.url}</h2>
+              <img src ={craft.url} alt="craft" width="200px"/>
               <p>description: {craft.description}</p>
               <h2>materials:<ul>
                 {craft.materials.map((material) =>
@@ -36,15 +39,18 @@ function CraftDetail(props) {
         <button onClick={props.onClickingEdit}>Update Craft</button>
         <button onClick={() => onClickingDelete(craft.id)}>Close Craft</button>
         <hr />
+        </div>
       </React.Fragment>
     );
   } else {
     return (
       <React.Fragment>
-        {/* <div className="card1">
+        <div id ="craftDetails">
+        <div className="card1">
         <div className="container">
-          <div id="craftDetails"> */}
+          <div id="craftDetails">
         <h1>{craft.name} Details</h1>
+        <img src ={craft.url} alt="craft" width="300px"/>
         <p>description: {craft.description}</p>
         <h2>materials:<ul>
           {craft.materials.map((material) =>
@@ -61,13 +67,14 @@ function CraftDetail(props) {
           </ul>
         </h3>
 
-        {/* </div>
+        </div>
         </div> 
-      </div> */}
+      </div>
 
         <button onClick={props.onClickingEdit}>Update Craft</button>
         <button onClick={() => onClickingDelete(craft.id)}>Close Craft</button>
         <hr />
+        </div>
       </React.Fragment>
     );
   }

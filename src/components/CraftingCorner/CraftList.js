@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Craft from "./Craft";
 import { useSelector } from 'react-redux'
-import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase'
+import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'
 
 
 function CraftList(props) {
@@ -17,18 +17,17 @@ function CraftList(props) {
         <div id ="craftList">
          
           <div className="card1">
-          <h1>Crafts:</h1>
+          <h1>crafts:</h1>
             <div className="container">
            
               {crafts.map((craft) => {
                 return(
                 
                 <Craft
+                  
                   whenCraftClicked={props.onCraftSelection}
+                  url = {craft.url}
                   name={craft.name}
-                  // ingredients= {craft.ingredients}
-                  // steps={craft.steps}
-                  description={craft.description}
                   id={craft.id}
                   key={craft.id} />
                 )
@@ -51,7 +50,7 @@ function CraftList(props) {
 }
 
 CraftList.propTypes = {
-  onCraftSelection: PropTypes.func
+  onRecipeSelection: PropTypes.func
 };
 
 export default CraftList;

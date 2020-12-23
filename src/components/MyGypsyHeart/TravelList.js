@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Travel from "./Travel";
 import { useSelector } from 'react-redux'
 import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'
-import './TravelList.css';
+
 
 function TravelList(props) {
   useFirestoreConnect([

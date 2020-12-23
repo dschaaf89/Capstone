@@ -21,10 +21,6 @@ code {
   color: white;
   font-family: 'Great Vibes', cursive;
   font-size: 1.25rem;
-
-
- 
- 
   
 }
 .card{
@@ -55,28 +51,15 @@ border-radius: 5%;
 .card1{
 background-image: url(https://media.macphun.com/img/uploads/customer/blog/1543597882/15435984725c017188f41eb1.29284408.jpg?q=85&w=1680);
 width: 90%;
-height:900px;
+height:600px;
 margin-left: 5%;
 padding: 5%;
 overflow-y: scroll;
 margin-bottom: 5%;
 border-radius: 5%;
 }
-.craftList{
-  
-  text-align: center;
-  color: black;
-  font-family: 'Great Vibes', cursive;
-  font-size: 1.25rem;
-}
 
-#craftDetails.h1{
-  margin-top:10%;
-  color: black;
-  text-align: center;
-  font-family: 'Great Vibes', cursive;
 
-}
 #footer {
   text-align: center;
   position: fixed;
@@ -136,4 +119,43 @@ border-radius: 5%;
     text-align: center;
     font-family: 'Caveat', cursive;
     font-size: x-large;
+}
+#craftDetails{
+  
+  text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: x-large
+
+}
+
+#craftList{
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: x-large;
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#contactFormContainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }

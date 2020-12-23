@@ -33,6 +33,7 @@ const ContactForm = () => {
       
   };
   return(
+    <div id="contactForm">
     <div className="card3">
       
     <form className='form' onSubmit={handleSubmit}>
@@ -41,13 +42,13 @@ const ContactForm = () => {
       <h1>Contact Me</h1>
       <div className="col">
       <label>Name</label>
-      <input placeholder="Name" value = {name}
+      <input type='text' placeholder="Name" value = {name}
       onChange={(e)=> setName(e.target.value)}
       />
       </div>
       <div className="col">
       <label>Email</label>
-      <input placeholder="Email" value = {email}
+      <input type='text' placeholder="Email" value = {email}
       onChange={(e)=> setEmail(e.target.value)}
       />
       </div>
@@ -62,6 +63,7 @@ const ContactForm = () => {
     </div>
     </div>
     </form>
+    </div>
     </div>
   )
   

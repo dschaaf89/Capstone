@@ -28,9 +28,6 @@ function RecipeList(props) {
                   whenRecipeClicked={props.onRecipeSelection}
                   url = {recipe.url}
                   name={recipe.name}
-                  // ingredients= {recipe.ingredients}
-                  // steps={recipe.steps}
-                  description={recipe.description}
                   id={recipe.id}
                   key={recipe.id} />
                 )

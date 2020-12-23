@@ -7,6 +7,13 @@ import CraftStore from "./../../assets/Craft-Store.jpg";
 import './styles.scss';
 import { Link } from 'react-router-dom';
 
+
+{/* <Link to = {item.link}>
+                                <a className = {item.cName} href = {item.cName} >
+                                   {item.title}
+                               </a>
+                               </Link> */}
+
 const Directory = props => {
   return (
     <div className="directory">
@@ -17,9 +24,9 @@ const Directory = props => {
             backgroundImage: `url(${Food})`
           }}
         >
-          <a href = '/inthekitchen'>
+          <Link to ='/inthekitchen'>
             InTheKitchen
-          </a>
+          </Link>
         </div>
         <div
           className="item"
@@ -27,9 +34,9 @@ const Directory = props => {
             backgroundImage: `url(${Craft})`
           }}
         >
-          <a href='/craftingcorner'>
+          <Link to ='/craftingCorner'>
             CraftingCorner
-          </a>
+          </Link>
         </div>
         <div
           className="item"
@@ -37,9 +44,9 @@ const Directory = props => {
             backgroundImage: `url(${Travel})`
           }}
         >
-          <a href ='/mygypsyheart'>
+          <Link to ='/myGypsyHeart'>
             MyGypsyHeart
-          </a>
+          </Link>
         </div>
         <div
           className="item"
@@ -47,9 +54,9 @@ const Directory = props => {
             backgroundImage: `url(${AboutMe})`
           }}
         >
-          <a href='/aboutme'>
-            AboutMe
-          </a>
+         <Link to="aboutMe">
+           AboutMe
+         </Link>
         </div>
         <div
           className="item"
@@ -57,9 +64,9 @@ const Directory = props => {
             backgroundImage: `url(${CraftStore})`
           }}
         >
-          <a href='/craftstore'>
+          <Link to="/craftstore">
             Store
-          </a>
+          </Link>
         </div>
       </div>
     </div>
