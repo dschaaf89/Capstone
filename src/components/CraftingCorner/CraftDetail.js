@@ -14,7 +14,7 @@ function CraftDetail(props) {
           <div className="container">
             <div id="craftDetails">
               <h1>{craft.name} Details</h1>
-              <h2>{craft.url}</h2>
+
               <img src ={craft.url} alt="craft" width="200px"/>
               <p>description: {craft.description}</p>
               <h2>materials:<ul>
