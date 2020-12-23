@@ -19,6 +19,7 @@ function TravelDetail(props) {
               </div>
             </div>
           </div>
+          <button onClick={()=> props.onClickReturn() }>Return To List </button>
         </div>
       </React.Fragment>
     )

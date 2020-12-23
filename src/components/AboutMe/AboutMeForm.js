@@ -3,7 +3,7 @@ import { storage } from '../../firebase';
 import PropTypes from "prop-types";
 import { useFirestore } from 'react-redux-firebase';
 import { useSelector } from 'react-redux';
-import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
+import { useFirestoreConnect } from 'react-redux-firebase';
 
 
 function AboutMeForm(props){
@@ -104,6 +104,8 @@ function AboutMeForm(props){
 
         <button type='submit'>Submit</button>
       </form>
+
+   
     </React.Fragment>
   )
 }

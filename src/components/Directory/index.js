@@ -8,11 +8,7 @@ import './styles.scss';
 import { Link } from 'react-router-dom';
 
 
-{/* <Link to = {item.link}>
-                                <a className = {item.cName} href = {item.cName} >
-                                   {item.title}
-                               </a>
-                               </Link> */}
+
 
 const Directory = props => {
   return (

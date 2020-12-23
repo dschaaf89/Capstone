@@ -92,6 +92,7 @@ class InTheKitchenController extends React.Component {
       } else if (this.state.selectedRecipe != null) {
         currentlyVisibleState =
           <RecipeDetail
+            onClickReturn = {this.handleClick}
             recipe={this.state.selectedRecipe}
             onClickingDelete={this.handleDeletingRecipe}
             onClickingEdit={this.handleEditClick} />

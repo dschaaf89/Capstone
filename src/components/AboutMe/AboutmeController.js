@@ -71,7 +71,6 @@ class AboutMeController extends React.Component {
       let buttonText = null;
       if (this.state.editing ) {  
         
-        
         currentlyVisibleState = <AboutMeForm  onEditAboutMe = {this.handleEditingAboutMeInList} />
         buttonText = "Return to AboutMe";
       } else {

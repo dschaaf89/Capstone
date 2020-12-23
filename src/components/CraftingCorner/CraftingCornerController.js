@@ -91,6 +91,7 @@ class CraftingCornerController extends React.Component {
     } else if (this.state.selectedCraft != null) {
       currentlyVisibleState = 
       <CraftDetail 
+        onClickReturn = {this.handleClick}
         craft = {this.state.selectedCraft} 
         onClickingDelete = {this.handleDeletingCraft} 
         onClickingEdit = {this.handleEditClick} />

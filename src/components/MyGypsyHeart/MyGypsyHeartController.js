@@ -89,6 +89,7 @@ class MyGypsyHeartController extends React.Component {
       } else if (this.state.selectedTravel != null) {
         currentlyVisibleState =
           <TravelDetail
+          onClickReturn = {this.handleClick}
             travel={this.state.selectedTravel}
             onClickingDelete={this.handleDeletingTravel}
             onClickingEdit={this.handleEditClick} />

@@ -13,7 +13,7 @@ function RecipeDetail(props) {
           <div className="container">
             <div id="recipeDetails">
               <h1>{recipe.name} Details</h1>
-              <img src={recipe.url} alt=""></img>
+              <img src={recipe.url} alt="" width = "200px"></img>
               <p>description: {recipe.description}</p>
               <h2>ingredients:<ul>
                 {recipe.ingredients.map((ingredients) =>
@@ -31,6 +31,7 @@ function RecipeDetail(props) {
               </h3>
             </div>
           </div>
+          <button onClick={()=> props.onClickReturn() }>Return To List </button>
         </div>
       </React.Fragment>
     )

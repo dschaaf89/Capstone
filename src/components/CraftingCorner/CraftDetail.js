@@ -34,10 +34,9 @@ function CraftDetail(props) {
 
             </div>
           </div>
+          <button onClick={()=> props.onClickReturn() }>Return To List </button>
         </div>
-
-        <button onClick={props.onClickingEdit}>Update Craft</button>
-        <button onClick={() => onClickingDelete(craft.id)}>Close Craft</button>
+       
         <hr />
         </div>
       </React.Fragment>

@@ -9,7 +9,7 @@ function Recipe(props) {
      
       <div onClick={() => props.whenRecipeClicked(props.id)}>
         <div className="photo">
-        <img src={props.url} alt="img of food" width="150px" margin="0"/>
+        <img src={props.url} alt="img of food" width="150px"/>
         </div>
         <h1>{props.name}</h1>
         <h3>{props.ingredients}</h3>
