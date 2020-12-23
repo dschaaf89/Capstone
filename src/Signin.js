@@ -41,6 +41,7 @@ function Signin() {
 
       <h1>Sign Out</h1>
       <button onClick={doSignOut}>Sign out</button>
+      alert("you have signed out");
     </React.Fragment>
       
   );
