@@ -68,6 +68,8 @@
 
 This React-Redux website was built in collaboration with my wife. She was telling me back in october and november that she wanted a site and started telling me every detail that would be great. It was during this time that she also decided that she wanted to have a streaming platform and future versions of this site will have her videos of all the projects, recipes and videos for her travel blog. 
 
+hosted link https://capstone-ccbb4.web.app/
+
 ![picture](images/capstone.jpg)
 
 
